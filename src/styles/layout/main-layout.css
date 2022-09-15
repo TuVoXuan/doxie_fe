@@ -1,0 +1,149 @@
+.header {
+    display: flex;
+    padding: 15px 0;
+    background: var(--gray-5);
+    justify-content: space-between;
+}
+.header__header-left {
+    display: flex;
+    column-gap: 40px;
+}
+
+.header-left__nav {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.nav__nav-list {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list__li {
+    display: inline;
+    cursor: pointer;
+}
+
+.nav-list__li:not(:last-child) {
+    margin-right: 22px;
+}
+
+.header-left__search-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gray-20);
+    padding: 0 14px;
+    border: 1px solid var(--gray-10);
+    border-radius: 8px;
+    min-width: 308px;
+}
+
+.search-box__input {
+    outline: 0;
+    border: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.header__header-right {
+    display: flex;
+    column-gap: 18px;
+    align-items: center;
+}
+
+.header-right__user-info {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.user-info__name-container {
+    text-align: end;
+}
+
+.name-container__greeting {
+    font-weight: 600;
+    color: var(--gray-80);
+}
+
+.name-container__name {
+    font-weight: 700;
+    color: var(--black-80);
+}
+
+.user-info__avatar-container {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.avatar-container__image {
+    height: inherit;
+    width: inherit;
+}
+
+.header-right__cart-button {
+    display: flex;
+    background: var(--gray-10);
+    border: 2px solid var(--gray-20);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    color: var(--gray-80);
+    margin-bottom: 44px;
+}
+
+.footer__des {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.des__social {
+    display: flex;
+    column-gap: 10px;
+}
+
+.social__buton {
+    display: flex;
+    background: var(--gray-10);
+    border: 0;
+    padding: 7px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.footer__company-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.company-info__title {
+    margin-bottom: 20px;
+}
+
+.company-info__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.company-info__list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.tag-link {
+    color: var(--gray-80);
+    text-decoration: none;
+}
