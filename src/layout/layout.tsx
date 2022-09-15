@@ -1,7 +1,8 @@
+import React from 'react';
 import { BsSearch, BsTwitter } from 'react-icons/bs';
-import { Route } from 'react-router-dom';
 import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import '../styles/layout/main-layout.css';
+import logo from '../assets/images/logo.svg';
 
 interface Props {
     children: React.ReactNode;
@@ -10,11 +11,11 @@ interface Props {
 export default function Layout({ children }: Props) {
     return (
         <>
-            <header className="header">
+            <header className="header px-10">
                 <section className="header__header-left">
                     <nav className="header-left__nav">
                         <div className="nav__logo">
-                            <img src={require('../asset/images/logo.svg').default} alt="logo" />
+                            <img src={logo} alt="logo" />
                         </div>
 
                         <ul className="nav__nav-list">
@@ -59,7 +60,7 @@ export default function Layout({ children }: Props) {
                             <div className="user-info__avatar-container">
                                 <img
                                     className="avatar-container__image"
-                                    src={require('../asset/images/avatar.jpg')}
+                                    src={require('../assets/images/avatar.jpg')}
                                     alt="avatar"
                                 />
                             </div>
@@ -71,12 +72,12 @@ export default function Layout({ children }: Props) {
                 </section>
             </header>
 
-            <body>{children}</body>
+            <body className="px-10">{children}</body>
 
-            <footer className="footer">
+            <footer className="footer px-10">
                 <div className="footer__des">
                     <div>
-                        <img src={require('../asset/images/logo.svg').default} alt="logo" />
+                        <img src={logo} alt="logo" />
                     </div>
                     <p>
                         Small, artisan label that offers a thoughtfully curated collection of high
