@@ -8,9 +8,6 @@ import ClothesDetail from './page/clothes-detal';
 import ErrorPage from './page/error-page';
 
 function App() {
-    var a;
-    var sdfsdf;
-    var sdfsdfsdfsd;
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
