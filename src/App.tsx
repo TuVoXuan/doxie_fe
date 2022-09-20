@@ -8,6 +8,7 @@ import ClothesDetail from './page/clothes-detal';
 import ErrorPage from './page/error-page';
 
 function App() {
+    var a;
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
