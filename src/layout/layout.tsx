@@ -2,6 +2,7 @@ import { BsSearch, BsTwitter } from 'react-icons/bs';
 import { Route } from 'react-router-dom';
 import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import '../styles/layout/main-layout.css';
+import React from 'react';
 
 interface Props {
     children: React.ReactNode;
