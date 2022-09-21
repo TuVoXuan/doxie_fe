@@ -72,7 +72,7 @@ export default function Layout({ children }: Props) {
                 </section>
             </header>
 
-            <body className="px-10">{children}</body>
+            <main className="px-10">{children}</main>
 
             <footer className="footer px-10">
                 <div className="footer__des">
