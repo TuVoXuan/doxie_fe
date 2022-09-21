@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    column-gap: 44px;
+}
+
+.container__navBar {
+    width: 252px;
+}
+
+.container__listCardContainer {
+    width: 100%;
+    background-color: rebeccapurple;
+}

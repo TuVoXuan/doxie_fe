@@ -8,7 +8,7 @@ import {
     selectCount,
 } from '../../redux/reducers/counter-slice';
 
-import styles from '../../styles/components/Counter.module.css';
+import styles from './Counter.module.css';
 
 export function Counter() {
     const count = useAppSelector(selectCount);

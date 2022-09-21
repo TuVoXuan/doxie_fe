@@ -3,7 +3,7 @@ import HomePage from './page/home-page';
 import CounterPage from './page/counter-page';
 import './styles/App.css';
 import React from 'react';
-import ClothesPage from './page/clothes-page';
+import ClothesPage from './page/clothes-page/clothes-page';
 import ClothesDetail from './page/clothes-detal';
 import ErrorPage from './page/error-page';
 

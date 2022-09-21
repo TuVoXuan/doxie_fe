@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsSearch, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
-import '../styles/layout/main-layout.css';
+import './main-layout.css';
 import logo from '../assets/images/logo.svg';
 
 interface Props {
