@@ -58,9 +58,9 @@
         "eslint-plugin-react": "^7.31.8"
     },
     "lint-staged": {
+        "src/**/*.{ts,tsx}": "eslint",
         "src/**/*.{ts,tsx,css}": [
             "prettier --write",
-            "eslint",
             "git add ."
         ]
     },

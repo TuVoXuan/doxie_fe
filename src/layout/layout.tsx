@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsSearch, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
-import '../styles/layout/main-layout.css';
+import './main-layout.css';
 import logo from '../assets/images/logo.svg';
 
 interface Props {
@@ -72,7 +72,7 @@ export default function Layout({ children }: Props) {
                 </section>
             </header>
 
-            <body className="px-10">{children}</body>
+            <main className="px-10">{children}</main>
 
             <footer className="footer px-10">
                 <div className="footer__des">
