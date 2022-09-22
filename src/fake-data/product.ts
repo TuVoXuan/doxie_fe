@@ -709,4 +709,176 @@ export const products: IProduct[] = [
             "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
         size: ['M', 'L', 'XL'],
     },
+
+    // Sweater-kids
+    {
+        id: 'be6199de-ddc6-4d1e-83e8-ae0e8e07516c',
+        category: '8e953a2a-c75a-4fbf-b144-c9fda97544c4',
+        imageDefault: './assets/images/kids/Sweater/Sweater1.png',
+        images: [
+            './assets/images/kids/Sweater/Sweater1-1.png',
+            './assets/images/kids/Sweater/Sweater1-2.png',
+            './assets/images/kids/Sweater/Sweater1-3.png',
+        ],
+        name: 'Fine-knit Cotton Sweater',
+        price: 17.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '6ee65b6a-eca3-4e7f-9c8e-24afec5acd25',
+        category: '8e953a2a-c75a-4fbf-b144-c9fda97544c4',
+        imageDefault: './assets/images/kids/Sweater/Sweater2.png',
+        images: [
+            './assets/images/kids/Sweater/Sweater2-1.png',
+            './assets/images/kids/Sweater/Sweater2-2.png',
+            './assets/images/kids/Sweater/Sweater2-3.png',
+        ],
+        name: 'Printed Sweatshirt',
+        price: 9.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '3c93d32d-0401-45bf-994c-2a72257fc397',
+        category: '8e953a2a-c75a-4fbf-b144-c9fda97544c4',
+        imageDefault: './assets/images/kids/Sweater/Sweater3.png',
+        images: [
+            './assets/images/kids/Sweater/Sweater3-1.png',
+            './assets/images/kids/Sweater/Sweater3-2.png',
+            './assets/images/kids/Sweater/Sweater3-3.png',
+        ],
+        name: 'Knit Cotton Sweater',
+        price: 19.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: 'baaf5362-b2e6-4e73-ad00-d5ed194c31d5',
+        category: '8e953a2a-c75a-4fbf-b144-c9fda97544c4',
+        imageDefault: './assets/images/kids/Sweater/Sweater4.png',
+        images: [
+            './assets/images/kids/Sweater/Sweater4-1.png',
+            './assets/images/kids/Sweater/Sweater4-2.png',
+            './assets/images/kids/Sweater/Sweater4-3.png',
+        ],
+        name: 'Color-block Sweatshirt',
+        price: 19.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L', 'XL'],
+    },
+
+    // Jacket-kids
+    {
+        id: 'f2b893d4-0601-4adb-9492-97b7724ab0fa',
+        category: '85be22da-6e4d-469f-b6c3-47313b84e819',
+        imageDefault: './assets/images/kids/Jacket/Jacket1.png',
+        images: [
+            './assets/images/kids/Jacket/Jacket1-1.png',
+            './assets/images/kids/Jacket/Jacket1-2.png',
+            './assets/images/kids/Jacket/Jacket1-3.png',
+        ],
+        name: 'Teddy Bear Jacket',
+        price: 39.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L'],
+    },
+    {
+        id: '6b2236ef-9fd3-4638-89b7-1f52a02180e5',
+        category: '85be22da-6e4d-469f-b6c3-47313b84e819',
+        imageDefault: './assets/images/kids/Jacket/Jacket2.png',
+        images: [
+            './assets/images/kids/Jacket/Jacket2-1.png',
+            './assets/images/kids/Jacket/Jacket2-2.png',
+            './assets/images/kids/Jacket/Jacket2-3.png',
+        ],
+        name: 'Hooded Rain Jacket',
+        price: 49.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: 'd51b832d-62bf-4994-9595-350e11d1ebd3',
+        category: '85be22da-6e4d-469f-b6c3-47313b84e819',
+        imageDefault: './assets/images/kids/Jacket/Jacket3.png',
+        images: [
+            './assets/images/kids/Jacket/Jacket3-1.png',
+            './assets/images/kids/Jacket/Jacket3-2.png',
+            './assets/images/kids/Jacket/Jacket3-3.png',
+        ],
+        name: 'Hooded Jacket',
+        price: 19.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '550f82c7-4f9f-48f9-81dd-057717fe1a22',
+        category: '85be22da-6e4d-469f-b6c3-47313b84e819',
+        imageDefault: './assets/images/kids/Jacket/Jacket4.png',
+        images: [
+            './assets/images/kids/Jacket/Jacket4-1.png',
+            './assets/images/kids/Jacket/Jacket4-2.png',
+            './assets/images/kids/Jacket/Jacket4-3.png',
+        ],
+        name: 'Appliquéd Baseball Jacket',
+        price: 49.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L'],
+    },
 ];

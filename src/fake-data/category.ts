@@ -71,12 +71,7 @@ export const categories: ICategory[] = [
     },
     {
         id: '85be22da-6e4d-469f-b6c3-47313b84e819',
-        name: 'short',
-        parentId: '464cd1ca-364b-4b87-aa14-07a55aae907a', //kids
-    },
-    {
-        id: 'cb64e440-ce71-4311-a306-da994c440c41',
-        name: 'dress',
+        name: 'jacket',
         parentId: '464cd1ca-364b-4b87-aa14-07a55aae907a', //kids
     },
 ];
