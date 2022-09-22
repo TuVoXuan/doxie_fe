@@ -525,8 +525,94 @@ export const products: IProduct[] = [
             './assets/images/men/Pant/Pant1-2.png',
             './assets/images/men/Pant/Pant1-3.png',
         ],
-        name: 'Relaxed Fit Hoodie',
+        name: 'Slim Fit Cotton Twill Pants',
         price: 29.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '1ea27791-2ed1-42fb-b994-9fa7e5df9e5b',
+        category: '03011286-ba7e-48eb-a12f-3ad63d703cdd',
+        imageDefault: './assets/images/men/Pant/Pant2.png',
+        images: [
+            './assets/images/men/Pant/Pant2-1.png',
+            './assets/images/men/Pant/Pant2-2.png',
+            './assets/images/men/Pant/Pant2-3.png',
+        ],
+        name: 'Regular Fit Joggerss',
+        price: 19.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: 'fc31ea05-4210-49e0-b5d1-039fb3c4de3f',
+        category: '03011286-ba7e-48eb-a12f-3ad63d703cdd',
+        imageDefault: './assets/images/men/Pant/Pant3.png',
+        images: [
+            './assets/images/men/Pant/Pant3-1.png',
+            './assets/images/men/Pant/Pant3-2.png',
+            './assets/images/men/Pant/Pant3-3.png',
+        ],
+        name: 'Skinny Fit Suit Pants',
+        price: 39.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: 'a81c4f5e-50bb-49a6-9705-9047405cc1bc',
+        category: '03011286-ba7e-48eb-a12f-3ad63d703cdd',
+        imageDefault: './assets/images/men/Pant/Pant4.png',
+        images: [
+            './assets/images/men/Pant/Pant4-1.png',
+            './assets/images/men/Pant/Pant4-2.png',
+            './assets/images/men/Pant/Pant4-3.png',
+        ],
+        name: 'Regular Fit Ripstop Cargo Pants',
+        price: 39.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+
+    // TShirt-kids
+    {
+        id: 'd081169e-7462-44dd-ad1a-288bc6874775',
+        category: '98f6639e-7ef0-4388-bd1c-f626bd6d3412',
+        imageDefault: './assets/images/kids/TShirts/TShirt1.png',
+        images: [
+            './assets/images/kids/TShirts/TShirt1-1.png',
+            './assets/images/kids/TShirts/TShirt1-2.png',
+            './assets/images/kids/TShirts/TShirt1-3.png',
+        ],
+        name: 'Printed T-shirt',
+        price: 14.99,
         productCare: [
             'Hand wash using cold water.',
             'Do not using bleach.',
