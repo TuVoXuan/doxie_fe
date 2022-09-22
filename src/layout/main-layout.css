@@ -23,6 +23,7 @@
 .nav-list__li {
     display: inline;
     cursor: pointer;
+    font-size: 13px;
 }
 
 .nav-list__li:not(:last-child) {
@@ -45,6 +46,7 @@
     border: 0;
     padding: 10px 0;
     width: 100%;
+    font-size: 13px;
 }
 
 .header__header-right {
@@ -65,11 +67,13 @@
 
 .name-container__greeting {
     font-weight: 600;
+    font-size: 13px;
     color: var(--gray-80);
 }
 
 .name-container__name {
     font-weight: 700;
+    font-size: 14px;
     color: var(--black-80);
 }
 
@@ -110,6 +114,10 @@
     justify-content: space-between;
 }
 
+.des_intro {
+    font-size: 12px;
+}
+
 .des__social {
     display: flex;
     column-gap: 10px;
@@ -131,12 +139,15 @@
 }
 
 .company-info__title {
+    font-size: 15px;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 .company-info__list {
     list-style: none;
     padding-left: 0;
+    font-size: 13px;
 }
 
 .company-info__list-item:not(:last-child) {
