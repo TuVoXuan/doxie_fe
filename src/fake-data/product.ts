@@ -709,4 +709,153 @@ export const products: IProduct[] = [
             "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
         size: ['M', 'L', 'XL'],
     },
+    {
+        id: '50dea9f9-6bbb-4586-8d32-9f7d33344734',
+        category: '98f6639e-7ef0-4388-bd1c-f626bd6d3412',
+        imageDefault: './assets/images/kids/TShirts/TShirt2.png',
+        images: [
+            './assets/images/kids/TShirts/TShirt2-1.png',
+            './assets/images/kids/TShirts/TShirt2-2.png',
+            './assets/images/kids/TShirts/TShirt2-3.png',
+        ],
+        name: 'Cotton T-shirt',
+        price: 9.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '847ea622-397c-4c10-b19f-e8c77affda82',
+        category: '98f6639e-7ef0-4388-bd1c-f626bd6d3412',
+        imageDefault: './assets/images/kids/TShirts/TShirt3.png',
+        images: [
+            './assets/images/kids/TShirts/TShirt3-1.png',
+            './assets/images/kids/TShirts/TShirt3-2.png',
+            './assets/images/kids/TShirts/TShirt3-3.png',
+        ],
+        name: 'Printed Cotton Jersey Shirt',
+        price: 9.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '006500fb-7c29-4934-a00f-47e2eaa59509',
+        category: '98f6639e-7ef0-4388-bd1c-f626bd6d3412',
+        imageDefault: './assets/images/kids/TShirts/TShirt4.png',
+        images: [
+            './assets/images/kids/TShirts/TShirt4-1.png',
+            './assets/images/kids/TShirts/TShirt4-2.png',
+            './assets/images/kids/TShirts/TShirt4-3.png',
+        ],
+        name: 'Printed Jersey Top',
+        price: 4.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+
+    // Pant-kids
+    {
+        id: '79bbd810-8a31-46cb-953f-7eb3b56a61bd',
+        category: 'abc4a13d-919a-4eaf-bb2d-0fc750c19416',
+        imageDefault: './assets/images/kids/Pant/Pant1.png',
+        images: [
+            './assets/images/kids/Pant/Pant1-1.png',
+            './assets/images/kids/Pant/Pant1-2.png',
+            './assets/images/kids/Pant/Pant1-3.png',
+        ],
+        name: 'Cotton Twill Joggers',
+        price: 14.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '3ccfc05f-885a-42dd-bb5b-65869a517218',
+        category: 'abc4a13d-919a-4eaf-bb2d-0fc750c19416',
+        imageDefault: './assets/images/kids/Pant/Pant2.png',
+        images: [
+            './assets/images/kids/Pant/Pant2-1.png',
+            './assets/images/kids/Pant/Pant2-2.png',
+            './assets/images/kids/Pant/Pant2-3.png',
+        ],
+        name: 'Comfort Stretch Skinny Fit Jeans',
+        price: 14.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: 'a70bb16b-c2ac-4407-956b-469bc59b63c5',
+        category: 'abc4a13d-919a-4eaf-bb2d-0fc750c19416',
+        imageDefault: './assets/images/kids/Pant/Pant3.png',
+        images: [
+            './assets/images/kids/Pant/Pant3-1.png',
+            './assets/images/kids/Pant/Pant3-2.png',
+            './assets/images/kids/Pant/Pant3-3.png',
+        ],
+        name: 'Cargo Pants',
+        price: 29.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '545cb677-86d7-4535-9595-51ce4be1348f',
+        category: 'abc4a13d-919a-4eaf-bb2d-0fc750c19416',
+        imageDefault: './assets/images/kids/Pant/Pant4.png',
+        images: [
+            './assets/images/kids/Pant/Pant4-1.png',
+            './assets/images/kids/Pant/Pant4-2.png',
+            './assets/images/kids/Pant/Pant4-3.png',
+        ],
+        name: 'Dress Pants',
+        price: 24.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
 ];
