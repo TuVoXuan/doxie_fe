@@ -10,3 +10,14 @@
 .container__listCardContainer {
     width: 100%;
 }
+
+.container__loadmore {
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.container__loadmore__button {
+    background: black;
+    padding: 0 50px;
+}
