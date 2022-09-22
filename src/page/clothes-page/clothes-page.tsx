@@ -75,7 +75,7 @@ export default function ClothesPage() {
         setPros(response.data);
 
         setAfter(response.after);
-    }, [childrenCate]);
+    }, [parentCate, childrenCate]);
 
     return (
         <Layout>
