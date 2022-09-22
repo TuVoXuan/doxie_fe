@@ -1,0 +1,23 @@
+.title__sub {
+    font-size: 80px;
+    color: var(--gray-10);
+    text-transform: capitalize;
+}
+
+.title__main {
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    text-transform: capitalize;
+    left: 0;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.title {
+    position: relative;
+}
+
+.title__sub--bold {
+    font-weight: 700;
+}
