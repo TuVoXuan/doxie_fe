@@ -267,8 +267,71 @@ export const products: IProduct[] = [
             './assets/images/men/TShirt/TShirt1-2.png',
             './assets/images/men/TShirt/TShirt1-3.png',
         ],
-        name: 'Slacks',
-        price: 32.99,
+        name: 'Relaxed Fit Printed T-shirt',
+        price: 24.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL'],
+    },
+    {
+        id: 'e30b6f55-8b72-42df-89fe-dc5c2640e717',
+        category: '43b83718-328b-4cf1-a0ae-449450fef920',
+        imageDefault: './assets/images/men/TShirt/TShirt2.png',
+        images: [
+            './assets/images/men/TShirt/TShirt2-1.png',
+            './assets/images/men/TShirt/TShirt2-2.png',
+            './assets/images/men/TShirt/TShirt2-3.png',
+        ],
+        name: 'Relaxed Fit Printed T-shirt',
+        price: 24.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '93e44ca1-4d21-4dc7-a18f-140f78df7d05',
+        category: '43b83718-328b-4cf1-a0ae-449450fef920',
+        imageDefault: './assets/images/men/TShirt/TShirt3.png',
+        images: [
+            './assets/images/men/TShirt/TShirt3-1.png',
+            './assets/images/men/TShirt/TShirt3-2.png',
+            './assets/images/men/TShirt/TShirt3-3.png',
+        ],
+        name: 'Slim Fit V-neck T-shirts',
+        price: 24.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '439d6014-4034-42e9-8acd-14962d1b37f4',
+        category: '43b83718-328b-4cf1-a0ae-449450fef920',
+        imageDefault: './assets/images/men/TShirt/TShirt4.png',
+        images: [
+            './assets/images/men/TShirt/TShirt4-1.png',
+            './assets/images/men/TShirt/TShirt4-2.png',
+            './assets/images/men/TShirt/TShirt4-3.png',
+        ],
+        name: 'Relaxed Fit Cotton T-shirt',
+        price: 17.99,
         productCare: [
             'Hand wash using cold water.',
             'Do not using bleach.',
@@ -284,11 +347,11 @@ export const products: IProduct[] = [
     {
         id: '38778a11-e3cb-4f59-8254-a349b6f8e5d6',
         category: 'cc610d2e-212d-4bf2-98e6-c2467e3201c7',
-        imageDefault: './assets/images/Dress/Dress1.png',
+        imageDefault: './assets/images/women/Dress/Dress1.png',
         images: [
-            './assets/images/Dress/Dress1-1.png',
-            './assets/images/Dress/Dress1-2.png',
-            './assets/images/Dress/Dress1-3.png',
+            './assets/images/women/Dress/Dress1-1.png',
+            './assets/images/women/Dress/Dress1-2.png',
+            './assets/images/women/Dress/Dress1-3.png',
         ],
         name: 'Ashley Puff-Sleeve Shirt Dress',
         price: 119.99,
@@ -305,11 +368,11 @@ export const products: IProduct[] = [
     {
         id: 'e080c7e1-5c25-4d29-8191-4f9e6b98ac1d',
         category: 'cc610d2e-212d-4bf2-98e6-c2467e3201c7',
-        imageDefault: './assets/images/Dress/Dress2.png',
+        imageDefault: './assets/images/women/Dress/Dress2.png',
         images: [
-            './assets/images/Dress/Dress2-1.png',
-            './assets/images/Dress/Dress2-2.png',
-            './assets/images/Dress/Dress2-3.png',
+            './assets/images/women/Dress/Dress2-1.png',
+            './assets/images/women/Dress/Dress2-2.png',
+            './assets/images/women/Dress/Dress2-3.png',
         ],
         name: 'Tammy Wrap Plisse Midi Dress',
         price: 189.99,
@@ -326,11 +389,11 @@ export const products: IProduct[] = [
     {
         id: 'ff8f42fc-f034-4018-9d69-c514a6515aed',
         category: 'cc610d2e-212d-4bf2-98e6-c2467e3201c7',
-        imageDefault: './assets/images/Dress/Dress3.png',
+        imageDefault: './assets/images/women/Dress/Dress3.png',
         images: [
-            './assets/images/Dress/Dress3-1.png',
-            './assets/images/Dress/Dress3-2.png',
-            './assets/images/Dress/Dress3-3.png',
+            './assets/images/women/Dress/Dress3-1.png',
+            './assets/images/women/Dress/Dress3-2.png',
+            './assets/images/women/Dress/Dress3-3.png',
         ],
         name: 'Marilyn Petite Satin Wrap Midi',
         price: 179.99,
@@ -347,14 +410,123 @@ export const products: IProduct[] = [
     {
         id: '7fafedc3-1ec8-4f57-948f-783d948a1cd2',
         category: 'cc610d2e-212d-4bf2-98e6-c2467e3201c7',
-        imageDefault: './assets/images/Dress/Dress4.png',
+        imageDefault: './assets/images/women/Dress/Dress4.png',
         images: [
-            './assets/images/Dress/Dress4-1.png',
-            './assets/images/Dress/Dress4-2.png',
-            './assets/images/Dress/Dress4-3.png',
+            './assets/images/women/Dress/Dress4-1.png',
+            './assets/images/women/Dress/Dress4-2.png',
+            './assets/images/women/Dress/Dress4-3.png',
         ],
         name: 'Dream Petite Ruched-Bodice Midi Dress',
         price: 159.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+
+    // Sweater-men
+    {
+        id: '3de49096-dcd4-405c-967b-90bcf63e32f0',
+        category: '47368a8e-8a70-4b35-b1c2-475b082f1890',
+        imageDefault: './assets/images/men/Sweater/Sweater1.png',
+        images: [
+            './assets/images/men/Sweater/Sweater1-1.png',
+            './assets/images/men/Sweater/Sweater1-2.png',
+            './assets/images/men/Sweater/Sweater1-3.png',
+        ],
+        name: 'Regular Fit Hoodie',
+        price: 34.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '4deb738f-39b1-4944-a3cf-c168a6459086',
+        category: '47368a8e-8a70-4b35-b1c2-475b082f1890',
+        imageDefault: './assets/images/men/Sweater/Sweater2.png',
+        images: [
+            './assets/images/men/Sweater/Sweater2-1.png',
+            './assets/images/men/Sweater/Sweater2-2.png',
+            './assets/images/men/Sweater/Sweater2-3.png',
+        ],
+        name: 'Printed Sweatshirt',
+        price: 29.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '904197cf-a0f2-4a44-87df-2ca1089294e8',
+        category: '47368a8e-8a70-4b35-b1c2-475b082f1890',
+        imageDefault: './assets/images/men/Sweater/Sweater3.png',
+        images: [
+            './assets/images/men/Sweater/Sweater3-1.png',
+            './assets/images/men/Sweater/Sweater3-2.png',
+            './assets/images/men/Sweater/Sweater3-3.png',
+        ],
+        name: 'Relaxed Fit Hoodie',
+        price: 24.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: 'f17af355-ef95-4f5e-b793-bd28d75590a6',
+        category: '47368a8e-8a70-4b35-b1c2-475b082f1890',
+        imageDefault: './assets/images/men/Sweater/Sweater4.png',
+        images: [
+            './assets/images/men/Sweater/Sweater4-1.png',
+            './assets/images/men/Sweater/Sweater4-2.png',
+            './assets/images/men/Sweater/Sweater4-3.png',
+        ],
+        name: 'Relaxed Fit Hoodie',
+        price: 29.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+
+    // Pant-men
+    {
+        id: 'c2eb7517-a48a-4ed5-bcb9-6781289ad902',
+        category: '03011286-ba7e-48eb-a12f-3ad63d703cdd',
+        imageDefault: './assets/images/men/Pant/Pant1.png',
+        images: [
+            './assets/images/men/Pant/Pant1-1.png',
+            './assets/images/men/Pant/Pant1-2.png',
+            './assets/images/men/Pant/Pant1-3.png',
+        ],
+        name: 'Relaxed Fit Hoodie',
+        price: 29.99,
         productCare: [
             'Hand wash using cold water.',
             'Do not using bleach.',
