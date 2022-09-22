@@ -1,0 +1,25 @@
+.title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.input {
+    border: 1px solid var(--gray-10);
+    border-radius: 9px;
+    padding: 14px 21px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--gray-20);
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    color: var(--red-40);
+}

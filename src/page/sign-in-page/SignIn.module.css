@@ -1,0 +1,94 @@
+.mainContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.container__leftContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-5);
+}
+
+.signInContainer {
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.signInContainer__imageConainer {
+    margin-bottom: 30px;
+}
+
+.signInContainer__subTitle {
+    margin-bottom: 10px;
+}
+
+.signInContainer__title {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form {
+    margin-bottom: 40px;
+}
+
+.form__input:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.btnContainer__btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-width: 0;
+    background: #000;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.signInContainer__endLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.endLogin__Signup {
+    font-weight: 500;
+}
+
+.container__rightContainer {
+    position: relative;
+    width: 40%;
+    background-color: var(--orange-20);
+}
+
+.container__image {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-25%);
+    width: 450px;
+}
