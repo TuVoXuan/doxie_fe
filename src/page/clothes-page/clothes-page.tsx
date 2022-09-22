@@ -6,6 +6,7 @@ import ProductCard from '../../components/product-card/product-card';
 import { useLocation } from 'react-router-dom';
 import NavbarItem from '../../components/navbar/navbar-item';
 import React from 'react';
+import { categories } from '../../fake-data/category';
 
 function useQuery() {
     const { search } = useLocation();
@@ -16,21 +17,21 @@ function useQuery() {
 export default function ClothesPage() {
     const query = useQuery();
     const parentCate = query.get('parentCate');
-    console.log('parentCate: ', parentCate);
     const childrenCate = query.get('childrenCate');
-    console.log('childrenCate: ', childrenCate);
 
-    const categories: string[] = [
-        'all products',
-        't shirts',
-        'sweater',
-        'jackets',
-        'dress',
-        'pants',
-        'coats',
-        'underware',
-        'shoes',
-    ];
+    const parentCategory: ICategory | undefined = categories.find(
+        (item) => item.name === parentCate
+    );
+
+    const categoryList: ICategory[] = categories.filter(
+        (item) => item.parentId === parentCategory?.id
+    );
+    categoryList.unshift({
+        id: '6362dd53-33a4-4bab-9cc7-9428c5931a3b',
+        name: 'all products',
+        parentId: null,
+    });
+
     const navigators: INavigator[] = [
         { title: 'home', to: '/' },
         { title: `${parentCate} product`, to: `/clothes?parentCate=${parentCate}` },
@@ -43,50 +44,50 @@ export default function ClothesPage() {
                 <div className={styles.container__navBar}>
                     <Navbar navTitle="product category">
                         {childrenCate
-                            ? categories.map((cate, index) => {
-                                  if (childrenCate === cate) {
+                            ? categoryList.map((cate, index) => {
+                                  if (childrenCate === cate.name) {
                                       return (
                                           <NavbarItem
-                                              key={cate}
+                                              key={cate.id}
                                               active
-                                              title={cate}
-                                              to={`/clothes?parentCate=${parentCate}&childrenCate=${cate}`}
+                                              title={cate.name}
+                                              to={`/clothes?parentCate=${parentCate}&childrenCate=${cate.name}`}
                                           />
                                       );
                                   }
                                   if (index === 0) {
                                       return (
                                           <NavbarItem
-                                              key={cate}
-                                              title={cate}
+                                              key={cate.id}
+                                              title={cate.name}
                                               to={`/clothes?parentCate=${parentCate}`}
                                           />
                                       );
                                   }
                                   return (
                                       <NavbarItem
-                                          key={cate}
-                                          title={cate}
-                                          to={`/clothes?parentCate=${parentCate}&childrenCate=${cate}`}
+                                          key={cate.id}
+                                          title={cate.name}
+                                          to={`/clothes?parentCate=${parentCate}&childrenCate=${cate.name}`}
                                       />
                                   );
                               })
-                            : categories.map((cate, index) => {
+                            : categoryList.map((cate, index) => {
                                   if (index === 0) {
                                       return (
                                           <NavbarItem
-                                              key={cate}
+                                              key={cate.id}
                                               active
-                                              title={cate}
+                                              title={cate.name}
                                               to={`/clothes?parentCate=${parentCate}`}
                                           />
                                       );
                                   }
                                   return (
                                       <NavbarItem
-                                          key={cate}
-                                          title={cate}
-                                          to={`/clothes?parentCate=${parentCate}&childrenCate=${cate}`}
+                                          key={cate.id}
+                                          title={cate.name}
+                                          to={`/clothes?parentCate=${parentCate}&childrenCate=${cate.name}`}
                                       />
                                   );
                               })}

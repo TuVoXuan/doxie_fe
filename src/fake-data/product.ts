@@ -279,4 +279,90 @@ export const products: IProduct[] = [
             "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
         size: ['XS', 'S', 'M', 'L', 'XL'],
     },
+
+    // Dress-women
+    {
+        id: '38778a11-e3cb-4f59-8254-a349b6f8e5d6',
+        category: 'cc610d2e-212d-4bf2-98e6-c2467e3201c7',
+        imageDefault: './assets/images/Dress/Dress1.png',
+        images: [
+            './assets/images/Dress/Dress1-1.png',
+            './assets/images/Dress/Dress1-2.png',
+            './assets/images/Dress/Dress1-3.png',
+        ],
+        name: 'Ashley Puff-Sleeve Shirt Dress',
+        price: 119.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: 'e080c7e1-5c25-4d29-8191-4f9e6b98ac1d',
+        category: 'cc610d2e-212d-4bf2-98e6-c2467e3201c7',
+        imageDefault: './assets/images/Dress/Dress2.png',
+        images: [
+            './assets/images/Dress/Dress2-1.png',
+            './assets/images/Dress/Dress2-2.png',
+            './assets/images/Dress/Dress2-3.png',
+        ],
+        name: 'Tammy Wrap Plisse Midi Dress',
+        price: 189.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: 'ff8f42fc-f034-4018-9d69-c514a6515aed',
+        category: 'cc610d2e-212d-4bf2-98e6-c2467e3201c7',
+        imageDefault: './assets/images/Dress/Dress3.png',
+        images: [
+            './assets/images/Dress/Dress3-1.png',
+            './assets/images/Dress/Dress3-2.png',
+            './assets/images/Dress/Dress3-3.png',
+        ],
+        name: 'Marilyn Petite Satin Wrap Midi',
+        price: 179.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '7fafedc3-1ec8-4f57-948f-783d948a1cd2',
+        category: 'cc610d2e-212d-4bf2-98e6-c2467e3201c7',
+        imageDefault: './assets/images/Dress/Dress4.png',
+        images: [
+            './assets/images/Dress/Dress4-1.png',
+            './assets/images/Dress/Dress4-2.png',
+            './assets/images/Dress/Dress4-3.png',
+        ],
+        name: 'Dream Petite Ruched-Bodice Midi Dress',
+        price: 159.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
 ];
