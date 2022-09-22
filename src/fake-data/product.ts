@@ -131,11 +131,11 @@ export const products: IProduct[] = [
     {
         id: '7ae76767-dbea-4b07-a62e-5b1d172a03d6',
         category: 'c1bfbd86-5657-442f-816a-8a92e7deb829',
-        imageDefault: './assets/images/Sweater-women3.png',
+        imageDefault: './assets/images/women/Sweater/Sweater3.png',
         images: [
-            './assets/images/Sweater-women3.png',
-            './assets/images/Sweater-women3.png',
-            './assets/images/Sweater-women3.png',
+            './assets/images/women/Sweater/Sweater3-1.png',
+            './assets/images/women/Sweater/Sweater3-2.png',
+            './assets/images/women/Sweater/Sweater3-3.png',
         ],
         name: 'Women Sweater MD31702',
         price: 50,
@@ -152,11 +152,11 @@ export const products: IProduct[] = [
     {
         id: 'f56fd2cb-71d2-4df2-be3a-9c97cf25246f',
         category: 'c1bfbd86-5657-442f-816a-8a92e7deb829',
-        imageDefault: './assets/images/Sweater-women4.png',
+        imageDefault: './assets/images/women/Sweater/Sweater4.png',
         images: [
-            './assets/images/Sweater-women4.png',
-            './assets/images/Sweater-women4.png',
-            './assets/images/Sweater-women4.png',
+            './assets/images/women/Sweater/Sweater4-1.png',
+            './assets/images/women/Sweater/Sweater4-2.png',
+            './assets/images/women/Sweater/Sweater4-3.png',
         ],
         name: 'Women Sweater MD71902',
         price: 50,
@@ -175,14 +175,100 @@ export const products: IProduct[] = [
     {
         id: '14f4b374-d65e-40b6-a05a-25f1eb236f3c',
         category: '30520649-9a93-41a9-aeb3-f9e154dbb969',
-        imageDefault: './assets/images/Sweater-women4.png',
+        imageDefault: './assets/images/women/Pant/Pant1.png',
         images: [
-            './assets/images/Sweater-women4.png',
-            './assets/images/Sweater-women4.png',
-            './assets/images/Sweater-women4.png',
+            './assets/images/women/Pant/Pant1-1.png',
+            './assets/images/women/Pant/Pant1-2.png',
+            './assets/images/women/Pant/Pant1-3.png',
         ],
-        name: 'Women Sweater MD71902',
-        price: 50,
+        name: 'Flared Dress Pants',
+        price: 34.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '9d117c36-5b5a-4bc6-8d9f-e456b13b5fc3',
+        category: '30520649-9a93-41a9-aeb3-f9e154dbb969',
+        imageDefault: './assets/images/women/Pant/Pant2.png',
+        images: [
+            './assets/images/women/Pant/Pant2-1.png',
+            './assets/images/women/Pant/Pant2-2.png',
+            './assets/images/women/Pant/Pant2-3.png',
+        ],
+        name: 'Slacks',
+        price: 19.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '8becd491-32fe-45a0-b0d8-fb3eab9eeca8',
+        category: '30520649-9a93-41a9-aeb3-f9e154dbb969',
+        imageDefault: './assets/images/women/Pant/Pant3.png',
+        images: [
+            './assets/images/women/Pant/Pant3-1.png',
+            './assets/images/women/Pant/Pant3-2.png',
+            './assets/images/women/Pant/Pant3-3.png',
+        ],
+        name: 'Straight-cut Joggers',
+        price: 24.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL'],
+    },
+    {
+        id: '43abace7-64bc-422e-bba7-d5b110c7a45d',
+        category: '30520649-9a93-41a9-aeb3-f9e154dbb969',
+        imageDefault: './assets/images/women/Pant/Pant4.png',
+        images: [
+            './assets/images/women/Pant/Pant4-1.png',
+            './assets/images/women/Pant/Pant4-2.png',
+            './assets/images/women/Pant/Pant4-3.png',
+        ],
+        name: 'Slacks',
+        price: 32.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL'],
+    },
+
+    // TShirt-men
+    {
+        id: '4b75e835-a15f-43fa-9bf7-8e77f98c0fa0',
+        category: '43b83718-328b-4cf1-a0ae-449450fef920',
+        imageDefault: './assets/images/men/TShirt/TShirt1.png',
+        images: [
+            './assets/images/men/TShirt/TShirt1-1.png',
+            './assets/images/men/TShirt/TShirt1-2.png',
+            './assets/images/men/TShirt/TShirt1-3.png',
+        ],
+        name: 'Slacks',
+        price: 32.99,
         productCare: [
             'Hand wash using cold water.',
             'Do not using bleach.',
