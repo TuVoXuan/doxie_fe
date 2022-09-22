@@ -72,14 +72,14 @@ export default function Layout({ children }: Props) {
                 </section>
             </header>
 
-            <main className="px-10">{children}</main>
+            <main className="px-10 mb-25">{children}</main>
 
             <footer className="footer px-10">
                 <div className="footer__des">
                     <div>
                         <img src={logo} alt="logo" />
                     </div>
-                    <p>
+                    <p className="des_intro">
                         Small, artisan label that offers a thoughtfully curated collection of high
                         quality everyday essentials made.
                     </p>

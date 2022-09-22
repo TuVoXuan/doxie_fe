@@ -14,7 +14,7 @@ function App() {
             <Route path="/counter" element={<CounterPage />} />
             <Route path="/clothes">
                 <Route index element={<ClothesPage />} />
-                <Route path=":id" element={<ClothesDetail />} />
+                {/* <Route path=":parentCate" element={<ClothesDetail />} /> */}
             </Route>
             <Route path="*" element={<ErrorPage />} />
         </Routes>

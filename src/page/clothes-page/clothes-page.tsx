@@ -3,11 +3,37 @@ import Layout from '../../layout/layout';
 import styles from './ClothesPage.module.css';
 import Navbar from '../../components/navbar/navbar';
 import ProductCard from '../../components/product-card/product-card';
+import { useLocation } from 'react-router-dom';
+import NavbarItem from '../../components/navbar/navbar-item';
+import React from 'react';
+
+function useQuery() {
+    const { search } = useLocation();
+
+    return React.useMemo(() => new URLSearchParams(search), [search]);
+}
 
 export default function ClothesPage() {
+    const query = useQuery();
+    const parentCate = query.get('parentCate');
+    console.log('parentCate: ', parentCate);
+    const childrenCate = query.get('childrenCate');
+    console.log('childrenCate: ', childrenCate);
+
+    const categories: string[] = [
+        'all products',
+        't shirts',
+        'sweater',
+        'jackets',
+        'dress',
+        'pants',
+        'coats',
+        'underware',
+        'shoes',
+    ];
     const navigators: INavigator[] = [
         { title: 'home', to: '/' },
-        { title: 'female product', to: '/clothes' },
+        { title: `${parentCate} product`, to: `/clothes?parentCate=${parentCate}` },
     ];
 
     return (
@@ -15,7 +41,56 @@ export default function ClothesPage() {
             <NavigateLink navigators={navigators} />
             <section className={styles.container}>
                 <div className={styles.container__navBar}>
-                    <Navbar />
+                    <Navbar navTitle="product category">
+                        {childrenCate
+                            ? categories.map((cate, index) => {
+                                  if (childrenCate === cate) {
+                                      return (
+                                          <NavbarItem
+                                              key={cate}
+                                              active
+                                              title={cate}
+                                              to={`/clothes?parentCate=${parentCate}&childrenCate=${cate}`}
+                                          />
+                                      );
+                                  }
+                                  if (index === 0) {
+                                      return (
+                                          <NavbarItem
+                                              key={cate}
+                                              title={cate}
+                                              to={`/clothes?parentCate=${parentCate}`}
+                                          />
+                                      );
+                                  }
+                                  return (
+                                      <NavbarItem
+                                          key={cate}
+                                          title={cate}
+                                          to={`/clothes?parentCate=${parentCate}&childrenCate=${cate}`}
+                                      />
+                                  );
+                              })
+                            : categories.map((cate, index) => {
+                                  if (index === 0) {
+                                      return (
+                                          <NavbarItem
+                                              key={cate}
+                                              active
+                                              title={cate}
+                                              to={`/clothes?parentCate=${parentCate}`}
+                                          />
+                                      );
+                                  }
+                                  return (
+                                      <NavbarItem
+                                          key={cate}
+                                          title={cate}
+                                          to={`/clothes?parentCate=${parentCate}&childrenCate=${cate}`}
+                                      />
+                                  );
+                              })}
+                    </Navbar>
                 </div>
                 <div className={styles.container__listCardContainer}>
                     <div

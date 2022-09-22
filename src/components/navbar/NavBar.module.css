@@ -8,12 +8,21 @@
     margin-bottom: 24px;
 }
 
+.navBar__head__title {
+    text-transform: uppercase;
+}
+
 .navBar__navBarItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px;
     text-transform: capitalize;
+    transition: all 1s ease;
+}
+
+.navBar__navBarItem:hover {
+    background-color: var(--gray-70);
 }
 
 .navBar__navBarItem:not(:last-child) {
