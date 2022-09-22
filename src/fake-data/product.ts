@@ -601,6 +601,92 @@ export const products: IProduct[] = [
         size: ['M', 'L', 'XL'],
     },
 
+    // Short-men
+    {
+        id: '5fdcbeae-b9ea-40a4-bd2b-ca775fb0ff76',
+        category: '52189cd1-e084-4ef0-95f0-0a8807deaf63',
+        imageDefault: './assets/images/men/Short/Short1.png',
+        images: [
+            './assets/images/men/Short/Short1-1.png',
+            './assets/images/men/Short/Short1-2.png',
+            './assets/images/men/Short/Short1-3.png',
+        ],
+        name: 'Regular Fit Sweatshorts',
+        price: 12.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL'],
+    },
+    {
+        id: '9c7c4177-f50e-4539-94d8-d1041b59fe6f',
+        category: '52189cd1-e084-4ef0-95f0-0a8807deaf63',
+        imageDefault: './assets/images/men/Short/Short2.png',
+        images: [
+            './assets/images/men/Short/Short2-1.png',
+            './assets/images/men/Short/Short2-2.png',
+            './assets/images/men/Short/Short2-3.png',
+        ],
+        name: 'Sports Shorts',
+        price: 12.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL'],
+    },
+    {
+        id: '1b905418-b2dd-499a-9e3f-b7111162e8f7',
+        category: '52189cd1-e084-4ef0-95f0-0a8807deaf63',
+        imageDefault: './assets/images/men/Short/Short3.png',
+        images: [
+            './assets/images/men/Short/Short3-1.png',
+            './assets/images/men/Short/Short3-2.png',
+            './assets/images/men/Short/Short3-3.png',
+        ],
+        name: 'Fast-drying Sports Shorts',
+        price: 17.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL'],
+    },
+    {
+        id: 'fd28aca1-faf8-41a4-8c96-2d0df7cf9785',
+        category: '52189cd1-e084-4ef0-95f0-0a8807deaf63',
+        imageDefault: './assets/images/men/Short/Short4.png',
+        images: [
+            './assets/images/men/Short/Short4-1.png',
+            './assets/images/men/Short/Short4-2.png',
+            './assets/images/men/Short/Short4-3.png',
+        ],
+        name: 'Fast-drying Sports Shorts',
+        price: 17.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['XS', 'S', 'M', 'L', 'XL', 'XXL', '3XL'],
+    },
+
     // TShirt-kids
     {
         id: 'd081169e-7462-44dd-ad1a-288bc6874775',
