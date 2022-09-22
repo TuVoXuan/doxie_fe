@@ -1,22 +1,22 @@
 export const categories: ICategory[] = [
     {
         id: '4ab5564b-06e8-4258-a156-cec05aa213bb',
-        name: 'Female',
+        name: 'female',
         parentId: null,
     },
     {
         id: '0e471997-fce9-4e99-b172-d476f4aa70be',
-        name: 'Male',
+        name: 'male',
         parentId: null,
     },
     {
         id: '464cd1ca-364b-4b87-aa14-07a55aae907a',
-        name: 'Kids',
+        name: 'kids',
         parentId: null,
     },
     {
         id: 'e44bef37-49ac-4dbc-aac5-93eceef73acd',
-        name: 'tShirts',
+        name: 't shirts',
         parentId: '4ab5564b-06e8-4258-a156-cec05aa213bb', //female
     },
     {
@@ -36,7 +36,7 @@ export const categories: ICategory[] = [
     },
     {
         id: '43b83718-328b-4cf1-a0ae-449450fef920',
-        name: 'tShirts',
+        name: 't shirts',
         parentId: '0e471997-fce9-4e99-b172-d476f4aa70be', //male
     },
     {
@@ -56,7 +56,7 @@ export const categories: ICategory[] = [
     },
     {
         id: '98f6639e-7ef0-4388-bd1c-f626bd6d3412',
-        name: 'tShirts',
+        name: 't shirts',
         parentId: '464cd1ca-364b-4b87-aa14-07a55aae907a', //kids
     },
     {
