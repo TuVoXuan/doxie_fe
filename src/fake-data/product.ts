@@ -261,11 +261,11 @@ export const products: IProduct[] = [
     {
         id: '4b75e835-a15f-43fa-9bf7-8e77f98c0fa0',
         category: '43b83718-328b-4cf1-a0ae-449450fef920',
-        imageDefault: './assets/images/men/TShirt/TShirt1.png',
+        imageDefault: './assets/images/men/TShirts/TShirt1.png',
         images: [
-            './assets/images/men/TShirt/TShirt1-1.png',
-            './assets/images/men/TShirt/TShirt1-2.png',
-            './assets/images/men/TShirt/TShirt1-3.png',
+            './assets/images/men/TShirts/TShirt1-1.png',
+            './assets/images/men/TShirts/TShirt1-2.png',
+            './assets/images/men/TShirts/TShirt1-3.png',
         ],
         name: 'Relaxed Fit Printed T-shirt',
         price: 24.99,
@@ -282,11 +282,11 @@ export const products: IProduct[] = [
     {
         id: 'e30b6f55-8b72-42df-89fe-dc5c2640e717',
         category: '43b83718-328b-4cf1-a0ae-449450fef920',
-        imageDefault: './assets/images/men/TShirt/TShirt2.png',
+        imageDefault: './assets/images/men/TShirts/TShirt2.png',
         images: [
-            './assets/images/men/TShirt/TShirt2-1.png',
-            './assets/images/men/TShirt/TShirt2-2.png',
-            './assets/images/men/TShirt/TShirt2-3.png',
+            './assets/images/men/TShirts/TShirt2-1.png',
+            './assets/images/men/TShirts/TShirt2-2.png',
+            './assets/images/men/TShirts/TShirt2-3.png',
         ],
         name: 'Relaxed Fit Printed T-shirt',
         price: 24.99,
@@ -303,11 +303,11 @@ export const products: IProduct[] = [
     {
         id: '93e44ca1-4d21-4dc7-a18f-140f78df7d05',
         category: '43b83718-328b-4cf1-a0ae-449450fef920',
-        imageDefault: './assets/images/men/TShirt/TShirt3.png',
+        imageDefault: './assets/images/men/TShirts/TShirt3.png',
         images: [
-            './assets/images/men/TShirt/TShirt3-1.png',
-            './assets/images/men/TShirt/TShirt3-2.png',
-            './assets/images/men/TShirt/TShirt3-3.png',
+            './assets/images/men/TShirts/TShirt3-1.png',
+            './assets/images/men/TShirts/TShirt3-2.png',
+            './assets/images/men/TShirts/TShirt3-3.png',
         ],
         name: 'Slim Fit V-neck T-shirts',
         price: 24.99,
@@ -324,11 +324,11 @@ export const products: IProduct[] = [
     {
         id: '439d6014-4034-42e9-8acd-14962d1b37f4',
         category: '43b83718-328b-4cf1-a0ae-449450fef920',
-        imageDefault: './assets/images/men/TShirt/TShirt4.png',
+        imageDefault: './assets/images/men/TShirts/TShirt4.png',
         images: [
-            './assets/images/men/TShirt/TShirt4-1.png',
-            './assets/images/men/TShirt/TShirt4-2.png',
-            './assets/images/men/TShirt/TShirt4-3.png',
+            './assets/images/men/TShirts/TShirt4-1.png',
+            './assets/images/men/TShirts/TShirt4-2.png',
+            './assets/images/men/TShirts/TShirt4-3.png',
         ],
         name: 'Relaxed Fit Cotton T-shirt',
         price: 17.99,
@@ -699,6 +699,155 @@ export const products: IProduct[] = [
         ],
         name: 'Printed T-shirt',
         price: 14.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '50dea9f9-6bbb-4586-8d32-9f7d33344734',
+        category: '98f6639e-7ef0-4388-bd1c-f626bd6d3412',
+        imageDefault: './assets/images/kids/TShirts/TShirt2.png',
+        images: [
+            './assets/images/kids/TShirts/TShirt2-1.png',
+            './assets/images/kids/TShirts/TShirt2-2.png',
+            './assets/images/kids/TShirts/TShirt2-3.png',
+        ],
+        name: 'Cotton T-shirt',
+        price: 9.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '847ea622-397c-4c10-b19f-e8c77affda82',
+        category: '98f6639e-7ef0-4388-bd1c-f626bd6d3412',
+        imageDefault: './assets/images/kids/TShirts/TShirt3.png',
+        images: [
+            './assets/images/kids/TShirts/TShirt3-1.png',
+            './assets/images/kids/TShirts/TShirt3-2.png',
+            './assets/images/kids/TShirts/TShirt3-3.png',
+        ],
+        name: 'Printed Cotton Jersey Shirt',
+        price: 9.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '006500fb-7c29-4934-a00f-47e2eaa59509',
+        category: '98f6639e-7ef0-4388-bd1c-f626bd6d3412',
+        imageDefault: './assets/images/kids/TShirts/TShirt4.png',
+        images: [
+            './assets/images/kids/TShirts/TShirt4-1.png',
+            './assets/images/kids/TShirts/TShirt4-2.png',
+            './assets/images/kids/TShirts/TShirt4-3.png',
+        ],
+        name: 'Printed Jersey Top',
+        price: 4.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+
+    // Pant-kids
+    {
+        id: '79bbd810-8a31-46cb-953f-7eb3b56a61bd',
+        category: 'abc4a13d-919a-4eaf-bb2d-0fc750c19416',
+        imageDefault: './assets/images/kids/Pant/Pant1.png',
+        images: [
+            './assets/images/kids/Pant/Pant1-1.png',
+            './assets/images/kids/Pant/Pant1-2.png',
+            './assets/images/kids/Pant/Pant1-3.png',
+        ],
+        name: 'Cotton Twill Joggers',
+        price: 14.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '3ccfc05f-885a-42dd-bb5b-65869a517218',
+        category: 'abc4a13d-919a-4eaf-bb2d-0fc750c19416',
+        imageDefault: './assets/images/kids/Pant/Pant2.png',
+        images: [
+            './assets/images/kids/Pant/Pant2-1.png',
+            './assets/images/kids/Pant/Pant2-2.png',
+            './assets/images/kids/Pant/Pant2-3.png',
+        ],
+        name: 'Comfort Stretch Skinny Fit Jeans',
+        price: 14.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: 'a70bb16b-c2ac-4407-956b-469bc59b63c5',
+        category: 'abc4a13d-919a-4eaf-bb2d-0fc750c19416',
+        imageDefault: './assets/images/kids/Pant/Pant3.png',
+        images: [
+            './assets/images/kids/Pant/Pant3-1.png',
+            './assets/images/kids/Pant/Pant3-2.png',
+            './assets/images/kids/Pant/Pant3-3.png',
+        ],
+        name: 'Cargo Pants',
+        price: 29.99,
+        productCare: [
+            'Hand wash using cold water.',
+            'Do not using bleach.',
+            'Hang it to dry.',
+            'Iron on low temperature.',
+        ],
+        productDetail:
+            "The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.",
+        size: ['M', 'L', 'XL'],
+    },
+    {
+        id: '545cb677-86d7-4535-9595-51ce4be1348f',
+        category: 'abc4a13d-919a-4eaf-bb2d-0fc750c19416',
+        imageDefault: './assets/images/kids/Pant/Pant4.png',
+        images: [
+            './assets/images/kids/Pant/Pant4-1.png',
+            './assets/images/kids/Pant/Pant4-2.png',
+            './assets/images/kids/Pant/Pant4-3.png',
+        ],
+        name: 'Dress Pants',
+        price: 24.99,
         productCare: [
             'Hand wash using cold water.',
             'Do not using bleach.',

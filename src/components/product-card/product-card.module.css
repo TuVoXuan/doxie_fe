@@ -15,6 +15,13 @@
     object-fit: contain;
     object-position: center;
     height: 100%;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.image:hover {
+    -webkit-transform: scale(1.2) rotate(0.01deg);
+    transform: scale(1.2) rotate(0.01deg);
 }
 
 .font--bold {

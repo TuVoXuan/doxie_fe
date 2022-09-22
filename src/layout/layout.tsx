@@ -3,6 +3,7 @@ import { BsSearch, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import './main-layout.css';
 import logo from '../assets/images/logo.svg';
+import { Link } from 'react-router-dom';
 
 interface Props {
     children: React.ReactNode;
@@ -19,26 +20,30 @@ export default function Layout({ children }: Props) {
                         </div>
 
                         <ul className="nav__nav-list">
-                            <li className="nav-list__li">
-                                <a href="/" className="text-black-80">
+                            <Link className="nav-list__li" to="/clothes?parentCate=female">
+                                Female
+                            </Link>
+                            <Link className="nav-list__li" to="/clothes?parentCate=male">
+                                Male
+                            </Link>
+                            <Link className="nav-list__li" to="/clothes?parentCate=kids">
+                                Kids
+                            </Link>
+                            {/* <li className="nav-list__li">
+                                <a href="/clothes?parentCate=female" className="text-black-80">
                                     Female
                                 </a>
                             </li>
                             <li className="nav-list__li">
-                                <a href="/" className="text-black-80">
+                                <a href="/clothes?parentCate=male" className="text-black-80">
                                     Male
                                 </a>
                             </li>
                             <li className="nav-list__li">
-                                <a href="/" className="text-black-80">
+                                <a href="/clothes?parentCate=kids" className="text-black-80">
                                     Kids
                                 </a>
-                            </li>
-                            <li className="nav-list__li">
-                                <a href="/" className="text-black-80">
-                                    Popular Product
-                                </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
                     <div className="header-left__search-box">

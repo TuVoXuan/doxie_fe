@@ -5,8 +5,9 @@ import Navbar from '../../components/navbar/navbar';
 import ProductCard from '../../components/product-card/product-card';
 import { useLocation } from 'react-router-dom';
 import NavbarItem from '../../components/navbar/navbar-item';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { categories } from '../../fake-data/category';
+import { getProducts } from '../../util/products';
 
 function useQuery() {
     const { search } = useLocation();
@@ -18,6 +19,9 @@ export default function ClothesPage() {
     const query = useQuery();
     const parentCate = query.get('parentCate');
     const childrenCate = query.get('childrenCate');
+    const [after, setAfter] = useState<string>('');
+    const [pros, setPros] = useState<IProductCard[]>([]);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const parentCategory: ICategory | undefined = categories.find(
         (item) => item.name === parentCate
@@ -36,6 +40,42 @@ export default function ClothesPage() {
         { title: 'home', to: '/' },
         { title: `${parentCate} product`, to: `/clothes?parentCate=${parentCate}` },
     ];
+
+    const handleLoadMore = () => {
+        setLoading(true);
+        let idCateogries: string[] = [];
+
+        if (childrenCate) {
+            const idCategory = categoryList.find((item) => item.name === childrenCate)?.id || '';
+            idCateogries = [idCategory];
+        } else {
+            idCateogries = categoryList.map((item) => item.id);
+        }
+
+        const response = getProducts(idCateogries, 6, after);
+
+        setTimeout(() => {
+            setLoading(false);
+            setPros((value) => [...value, ...response.data]);
+            setAfter(response.after);
+        }, 2000);
+    };
+
+    useEffect(() => {
+        let idCateogries: string[] = [];
+
+        if (childrenCate) {
+            const idCategory = categoryList.find((item) => item.name === childrenCate)?.id || '';
+            idCateogries = [idCategory];
+        } else {
+            idCateogries = categoryList.map((item) => item.id);
+        }
+
+        const response = getProducts(idCateogries, 6, '');
+        setPros(response.data);
+
+        setAfter(response.after);
+    }, [parentCate, childrenCate]);
 
     return (
         <Layout>
@@ -102,42 +142,27 @@ export default function ClothesPage() {
                             rowGap: '36px',
                         }}
                     >
-                        <ProductCard
-                            id={'6b930bfd-d558-40ea-ac4d-f99093b237d3'}
-                            image={'./assets/images/sweater.png'}
-                            price={1700}
-                            category={'sweater'}
-                            name={'Flex sweater Flex sweater Flex sweater Flex sweater'}
-                        />
-                        <ProductCard
-                            id={'6b930bfd-d558-40ea-ac4d-f99093b237d3'}
-                            image={'./assets/images/paint.png'}
-                            price={1700}
-                            category={'sweater'}
-                            name={'Flex sweater'}
-                        />
-                        <ProductCard
-                            id={'6b930bfd-d558-40ea-ac4d-f99093b237d3'}
-                            image={'./assets/images/dress1.png'}
-                            price={1700}
-                            category={'sweater'}
-                            name={'Flex sweater'}
-                        />
-                        <ProductCard
-                            id={'6b930bfd-d558-40ea-ac4d-f99093b237d3'}
-                            image={'./assets/images/dress2.png'}
-                            price={1700}
-                            category={'sweater'}
-                            name={'Flex sweater'}
-                        />
-                        <ProductCard
-                            id={'6b930bfd-d558-40ea-ac4d-f99093b237d3'}
-                            image={'./assets/images/bomber.png'}
-                            price={1700}
-                            category={'sweater'}
-                            name={'Flex sweater'}
-                        />
+                        {pros.map((item) => (
+                            <ProductCard key={item.id} product={item} />
+                        ))}
                     </div>
+                    {after && (
+                        <div className={styles.container__loadmore}>
+                            {loading ? (
+                                <button className={styles.container__loadmore__button}>
+                                    <div className="lds-ring">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </button>
+                            ) : (
+                                <button className="button" onClick={handleLoadMore}>
+                                    Load more
+                                </button>
+                            )}
+                        </div>
+                    )}
                 </div>
             </section>
         </Layout>
