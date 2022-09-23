@@ -78,7 +78,7 @@ export default function ClothesPage() {
     }, [parentCate, childrenCate]);
 
     return (
-        <Layout>
+        <Layout background="white">
             <NavigateLink navigators={navigators} />
             <section className={styles.container}>
                 <div className={styles.container__navBar}>

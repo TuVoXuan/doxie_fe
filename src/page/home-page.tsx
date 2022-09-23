@@ -4,7 +4,7 @@ import Layout from '../layout/layout';
 
 export default function HomePage() {
     return (
-        <Layout>
+        <Layout background="gray">
             <h1>Home page Home page</h1>
             <Container>
                 <Title mainTitle="Shopping cart" subTitle="tshirt" titleBold={true} />

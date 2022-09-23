@@ -3,8 +3,11 @@ import styles from './SignIn.module.css';
 import logo from '../../assets/images/logo.svg';
 import InputForm from '../../components/input-form/input-form';
 import { TbArrowBigRightLines } from 'react-icons/tb';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { useAppDispatch } from '../../app/hooks';
+import { signIn } from '../../redux/actions/user-actions';
+import { toastError } from '../../utils/toast';
 
 interface ISignInForm {
     email: string;
@@ -12,14 +15,22 @@ interface ISignInForm {
 }
 
 export default function SignInPage() {
+    const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm<ISignInForm>();
 
-    const onSubmit = (value: any) => {
-        console.log('value: ', value);
+    const onSubmit = async (value: any) => {
+        try {
+            await dispatch(signIn(value)).unwrap();
+            navigate('/');
+        } catch (error: any) {
+            toastError(error.message);
+        }
     };
 
     return (

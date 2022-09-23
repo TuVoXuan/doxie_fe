@@ -10,16 +10,18 @@ import SignInPage from './page/sign-in-page/sign-in';
 
 function App() {
     return (
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/sign-in" element={<SignInPage />} />
-            <Route path="/counter" element={<CounterPage />} />
-            <Route path="/clothes">
-                <Route index element={<ClothesPage />} />
-                {/* <Route path=":parentCate" element={<ClothesDetail />} /> */}
-            </Route>
-            <Route path="*" element={<ErrorPage />} />
-        </Routes>
+        <>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/sign-in" element={<SignInPage />} />
+                <Route path="/counter" element={<CounterPage />} />
+                <Route path="/clothes">
+                    <Route index element={<ClothesPage />} />
+                    {/* <Route path=":parentCate" element={<ClothesDetail />} /> */}
+                </Route>
+                <Route path="*" element={<ErrorPage />} />
+            </Routes>
+        </>
     );
 }
 

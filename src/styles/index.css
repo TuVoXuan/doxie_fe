@@ -40,6 +40,14 @@ a {
     margin-bottom: 100px;
 }
 
+.bg-gray-5 {
+    background-color: var(--gray-5);
+}
+
+.bg-white {
+    background: white;
+}
+
 .button {
     padding: 14px 50px;
     background-color: black;

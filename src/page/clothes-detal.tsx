@@ -5,7 +5,7 @@ export default function ClothesDetail() {
     const { id } = useParams();
 
     return (
-        <Layout>
+        <Layout background="gray">
             <h1>Clothe {id}</h1>
         </Layout>
     );
