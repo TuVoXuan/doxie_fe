@@ -1,0 +1,12 @@
+.form__signup {
+    display: flex;
+    column-gap: 12px;
+}
+
+.form__aside {
+    width: 300px;
+}
+
+.button_signup {
+    margin-bottom: 0;
+}

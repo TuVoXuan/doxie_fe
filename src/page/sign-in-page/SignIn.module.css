@@ -21,10 +21,11 @@
 }
 
 .signInContainer {
-    width: 400px;
+    min-width: 400px;
     padding: 40px;
     border-radius: 20px;
     background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .signInContainer__imageConainer {

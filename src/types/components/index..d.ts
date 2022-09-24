@@ -5,3 +5,9 @@ declare interface IProductCard {
     name: string;
     category: string;
 }
+
+declare interface IOption {
+    content: string;
+    value: string;
+    id?: string;
+}
