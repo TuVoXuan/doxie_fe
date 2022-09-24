@@ -29,26 +29,26 @@
     color: var(--red-40);
 }
 
-details {
+.details {
     position: relative;
     width: 300px;
     margin-right: 1rem;
 }
 
-details[open] {
+.details[open] {
     z-index: 1;
 }
 
-summary {
+.summary {
     cursor: pointer;
     list-style: none;
 }
 
-summary::-webkit-details-marker {
+.summary::-webkit-details-marker {
     display: none;
 }
 
-details[open] summary:before {
+.details[open] .summary:before {
     content: '';
     display: block;
     width: 100vw;
@@ -59,7 +59,7 @@ details[open] summary:before {
     left: 0;
 }
 
-summary:after {
+.summary:after {
     content: '';
     display: inline-block;
     float: right;
@@ -73,15 +73,15 @@ summary:after {
     transition: transform ease-in-out 100ms;
 }
 
-summary:focus {
+.summary:focus {
     outline: none;
 }
 
-details[open] summary:after {
+.details[open] .summary:after {
     transform: rotate(-45deg) translate(0%, 0%);
 }
 
-ul {
+.ul {
     width: 100%;
     position: absolute;
     /* top: calc(-100% - 0.5rem); */
@@ -99,22 +99,22 @@ ul {
     padding: 0;
 }
 
-li {
+.li {
     margin: 0;
     border-bottom: 1px solid #ccc;
 }
 
 /* FAKE SELECT */
 
-summary.radios {
+.summary.radios {
     counter-reset: radios;
 }
 
-summary.radios:before {
+.summary.radios:before {
     content: var(--selection);
 }
 
-input[type='radio'] {
+.input[type='radio'] {
     counter-increment: radios;
     margin: 0;
     font-size: 14px;
@@ -122,22 +122,22 @@ input[type='radio'] {
     display: none;
 }
 
-input[type='radio']:checked {
+.input[type='radio']:checked {
     display: inline;
     --display: block;
 }
 
-input[type='radio']:after {
+.input[type='radio']:after {
     content: attr(title);
     display: inline;
     font-size: 14px;
 }
 
-ul.list {
+.ul.list {
     counter-reset: labels;
 }
 
-label {
+.label {
     width: 100%;
     font-size: 14px;
     display: flex;
@@ -146,11 +146,11 @@ label {
     justify-content: space-between;
 }
 
-label:hover {
+.label:hover {
     background-color: var(--gray-10);
 }
 
-label span {
+.label span {
     --display: none;
     display: var(--display);
     width: 1rem;
