@@ -6,19 +6,11 @@ import InputForm from '../../components/input-form/input-form';
 import { TbArrowBigRightLines } from 'react-icons/tb';
 import { useForm } from 'react-hook-form';
 import SelectForm from '../../components/select-form/select-form';
-import { getDistricts, getProvinces, getWards } from '../../util/province-api';
-
-interface ISignUPForm {
-    name: string;
-    email: string;
-    phone: string;
-    streetAddress: string;
-    province: string;
-    district: string;
-    ward: string;
-    hamlet: string;
-    password: string;
-}
+import { getDistricts, getProvinces, getWards } from '../../utils/province-api';
+import { signUp } from '../../redux/actions/user-actions';
+import { useAppDispatch } from '../../app/hooks';
+import { useNavigate } from 'react-router-dom';
+import { toastError } from '../../utils/toast';
 
 export default function SignUpPage() {
     const {
@@ -26,7 +18,10 @@ export default function SignUpPage() {
         handleSubmit,
         watch,
         formState: { errors },
-    } = useForm<ISignUPForm>();
+    } = useForm<ISignUP>();
+
+    const dispatch = useAppDispatch();
+    const navigate = useNavigate();
 
     const [provinces, setProvinces] = useState<IOption[]>([]);
     const [districts, setDistricts] = useState<IOption[]>([]);
@@ -35,8 +30,15 @@ export default function SignUpPage() {
     const watchProvince = watch('province');
     const watchDistrict = watch('district');
 
-    const onSubmit = (value: any) => {
+    const onSubmit = async (value: any) => {
         console.log('value: ', value);
+
+        try {
+            await dispatch(signUp(value)).unwrap();
+            navigate('/');
+        } catch (error: any) {
+            toastError(error.message);
+        }
     };
 
     useEffect(() => {

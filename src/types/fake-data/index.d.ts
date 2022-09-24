@@ -53,7 +53,6 @@ declare interface IUser {
     province: string;
     district: string;
     ward: string;
-    hamlet: string;
     avatar: string;
     password: string;
 }

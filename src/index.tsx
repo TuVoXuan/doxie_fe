@@ -6,12 +6,21 @@ import { store } from './app/store';
 import { Provider } from 'react-redux';
 import App from './App';
 import './styles/index.css';
+import { Toaster } from 'react-hot-toast';
 
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
             <BrowserRouter>
                 <App />
+                <Toaster
+                    position="top-center"
+                    toastOptions={{
+                        style: {
+                            zIndex: 10,
+                        },
+                    }}
+                />
             </BrowserRouter>
         </Provider>
     </React.StrictMode>,

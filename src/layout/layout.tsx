@@ -4,46 +4,46 @@ import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import './main-layout.css';
 import logo from '../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../app/hooks';
+import { selectUser } from '../redux/reducers/user-slice';
+import NavLink from '../components/navigator/nav-link';
 
 interface Props {
     children: React.ReactNode;
+    background: 'gray' | 'white';
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children, background }: Props) {
+    const sUser = useAppSelector(selectUser);
+
+    const handleBackground = () => {
+        if (background === 'gray') {
+            return 'bg-gray-5';
+        }
+        return 'bg-white';
+    };
+
     return (
         <>
-            <header className="header px-10">
+            <header className={`header px-10 ${handleBackground()}`}>
                 <section className="header__header-left">
                     <nav className="header-left__nav">
-                        <div className="nav__logo">
-                            <img src={logo} alt="logo" />
-                        </div>
+                        <Link to={'/'}>
+                            <div className="nav__logo">
+                                <img src={logo} alt="logo" />
+                            </div>
+                        </Link>
 
                         <ul className="nav__nav-list">
-                            <Link className="nav-list__li" to="/clothes?parentCate=female">
-                                Female
-                            </Link>
-                            <Link className="nav-list__li" to="/clothes?parentCate=male">
-                                Male
-                            </Link>
-                            <Link className="nav-list__li" to="/clothes?parentCate=kids">
-                                Kids
-                            </Link>
-                            {/* <li className="nav-list__li">
-                                <a href="/clothes?parentCate=female" className="text-black-80">
-                                    Female
-                                </a>
+                            <li className="nav-list__li">
+                                <NavLink title="Female" to="/clothes?parentCate=female" />
                             </li>
                             <li className="nav-list__li">
-                                <a href="/clothes?parentCate=male" className="text-black-80">
-                                    Male
-                                </a>
+                                <NavLink title="Male" to="/clothes?parentCate=male" />
                             </li>
                             <li className="nav-list__li">
-                                <a href="/clothes?parentCate=kids" className="text-black-80">
-                                    Kids
-                                </a>
-                            </li> */}
+                                <NavLink title="Kids" to="/clothes?parentCate=kids" />
+                            </li>
                         </ul>
                     </nav>
                     <div className="header-left__search-box">
@@ -57,19 +57,21 @@ export default function Layout({ children }: Props) {
                 </section>
                 <section>
                     <div className="header__header-right">
-                        <div className="header-right__user-info">
-                            <div className="user-info__name-container">
-                                <p className="name-container__greeting">Hello</p>
-                                <p className="name-container__name">Evelyn Andreas</p>
+                        {sUser.isLogin && (
+                            <div className="header-right__user-info">
+                                <div className="user-info__name-container">
+                                    <p className="name-container__greeting">Hello</p>
+                                    <p className="name-container__name">{sUser.data.name}</p>
+                                </div>
+                                <div className="user-info__avatar-container">
+                                    <img
+                                        className="avatar-container__image"
+                                        src={sUser.data.avatar}
+                                        alt="avatar"
+                                    />
+                                </div>
                             </div>
-                            <div className="user-info__avatar-container">
-                                <img
-                                    className="avatar-container__image"
-                                    src={require('../assets/images/avatar.jpg')}
-                                    alt="avatar"
-                                />
-                            </div>
-                        </div>
+                        )}
                         <button className="header-right__cart-button">
                             <FaShoppingCart className="cart-button__icon" size={16} />
                         </button>

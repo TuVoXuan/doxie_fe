@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 import NavbarItem from '../../components/navbar/navbar-item';
 import React, { useEffect, useState } from 'react';
 import { categories } from '../../fake-data/category';
-import { getProducts } from '../../util/products';
+import { getProducts } from '../../utils/products';
 
 function useQuery() {
     const { search } = useLocation();
@@ -78,7 +78,7 @@ export default function ClothesPage() {
     }, [parentCate, childrenCate]);
 
     return (
-        <Layout>
+        <Layout background="white">
             <NavigateLink navigators={navigators} />
             <section className={styles.container}>
                 <div className={styles.container__navBar}>

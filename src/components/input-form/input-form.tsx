@@ -1,5 +1,5 @@
 import React from 'react';
-import { FieldValues, RegisterOptions, UseFormRegister } from 'react-hook-form';
+import { RegisterOptions, UseFormRegister } from 'react-hook-form';
 import styles from './InputForm.module.css';
 import { TiWarningOutline } from 'react-icons/ti';
 
