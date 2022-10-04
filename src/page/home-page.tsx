@@ -1,14 +1,14 @@
-import Container from '../components/Container/Container';
-import Title from '../components/title/Title';
+// import Container from '../components/Container/Container';
+
+import Hero from 'components/hero/hero';
 import Layout from '../layout/layout';
+
+// import Title from '../components/title/Title';
 
 export default function HomePage() {
     return (
         <Layout background="gray">
-            <h1>Home page Home page</h1>
-            <Container>
-                <Title mainTitle="Shopping cart" subTitle="tshirt" titleBold={true} />
-            </Container>
+            <Hero />
         </Layout>
     );
 }
