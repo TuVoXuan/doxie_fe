@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './page/home-page';
+import HomePage from './page/home-page/home-page';
 import CounterPage from './page/counter-page';
 import './styles/App.css';
 import React from 'react';

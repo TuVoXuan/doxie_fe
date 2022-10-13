@@ -1,0 +1,13 @@
+.categories {
+    text-align: center;
+    color: blue;
+    font-size: 0.5rem;
+    font-weight: 800;
+}
+
+.text {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 200%;
+}
