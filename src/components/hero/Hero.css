@@ -5,6 +5,7 @@
     grid-template-columns: 3fr 4fr;
     column-gap: 20px;
     height: 90vh;
+    margin-bottom: 100px;
 }
 
 /**
