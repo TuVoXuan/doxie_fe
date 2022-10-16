@@ -1,10 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './page/home-page';
+import HomePage from './page/home/home-page';
 import CounterPage from './page/counter-page';
 import './styles/App.css';
 import React from 'react';
 import ClothesPage from './page/clothes-page/clothes-page';
-import ClothesDetail from './page/clothes-detal';
 import ErrorPage from './page/error-page';
 import SignInPage from './page/sign-in-page/sign-in';
 import SignUpPage from './page/sign-up-page/sign-up';
