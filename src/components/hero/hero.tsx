@@ -29,15 +29,6 @@ export default function Hero() {
                 </div>
             </div>
             <div className="hero__imgContainer">
-                <svg
-                    width="35vw"
-                    height="80vh"
-                    viewBox="0 0 600 601"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <ellipse cx="300" cy="300.5" rx="300" ry="300.5" fill="#FFECE3" />
-                </svg>
                 <img className="hero__img" src={heroImg} alt="" />
             </div>
         </div>

@@ -58,6 +58,14 @@
     text-transform: capitalize;
 }
 
+.hero__button:hover {
+    opacity: 0.9;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 .hero__logo {
     position: absolute;
     bottom: 0;
