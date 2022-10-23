@@ -7,6 +7,7 @@ import ClothesPage from './page/clothes-page/clothes-page';
 import ErrorPage from './page/error-page';
 import SignInPage from './page/sign-in-page/sign-in';
 import SignUpPage from './page/sign-up-page/sign-up';
+import UserPage from './page/user-page/user-page';
 
 function App() {
     return (
@@ -19,6 +20,13 @@ function App() {
                 <Route index element={<ClothesPage />} />
                 {/* <Route path=":parentCate" element={<ClothesDetail />} /> */}
             </Route>
+            <Route path="/user">
+                <Route path="profile" element={<UserPage />} />
+                <Route path="transaction" element={<UserPage />}>
+                    <Route path=":id" element={<UserPage />} />
+                </Route>
+            </Route>
+
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     );

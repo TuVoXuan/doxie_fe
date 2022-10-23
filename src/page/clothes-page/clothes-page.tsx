@@ -8,12 +8,7 @@ import NavbarItem from '../../components/navbar/navbar-item';
 import React, { useEffect, useState } from 'react';
 import { categories } from '../../fake-data/category';
 import { getProducts } from '../../utils/products';
-
-function useQuery() {
-    const { search } = useLocation();
-
-    return React.useMemo(() => new URLSearchParams(search), [search]);
-}
+import { useQuery } from '../../utils/router';
 
 export default function ClothesPage() {
     const query = useQuery();
