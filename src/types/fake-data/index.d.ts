@@ -48,6 +48,5 @@ declare interface IUser {
     province: string;
     district: string;
     ward: string;
-    avatar: string;
     password: string;
 }

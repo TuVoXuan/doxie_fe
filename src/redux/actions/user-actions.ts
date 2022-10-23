@@ -30,3 +30,15 @@ export const updateProfile = createAsyncThunk(
         }
     }
 );
+
+export const getCurrentUser = createAsyncThunk(
+    'user/getCurrent',
+    async (userId: string, thunkAPI) => {
+        try {
+            const response = await userApi.getCurrentUser(userId);
+            return response.data;
+        } catch (error) {
+            return thunkAPI.rejectWithValue(error);
+        }
+    }
+);

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { signIn, signUp, updateProfile } from '../actions/user-actions';
+import { getCurrentUser, signIn, signUp, updateProfile } from '../actions/user-actions';
 
 export interface IUserState {
     isLogin: boolean;
@@ -10,7 +10,6 @@ export interface IUserState {
 const initialState: IUserState = {
     isLogin: false,
     data: {
-        avatar: '',
         district: '',
         email: '',
         id: '',
@@ -31,6 +30,7 @@ export const userSlice = createSlice({
             .addCase(signIn.fulfilled, (state, action: PayloadAction<IUserStore>) => {
                 state.isLogin = true;
                 state.data = action.payload;
+                localStorage.setItem('userId', action.payload.id);
             })
             .addCase(signIn.rejected, (state) => {
                 state.isLogin = false;
@@ -40,6 +40,7 @@ export const userSlice = createSlice({
             .addCase(signUp.fulfilled, (state, action: PayloadAction<IUserStore>) => {
                 state.isLogin = true;
                 state.data = action.payload;
+                localStorage.setItem('userId', action.payload.id);
             })
             .addCase(signUp.rejected, (state) => {
                 state.isLogin = false;
@@ -54,6 +55,17 @@ export const userSlice = createSlice({
             state.data.ward = action.payload.ward;
             state.data.streetAddress = action.payload.streetAddress;
         });
+        builder
+            .addCase(getCurrentUser.fulfilled, (state, action: PayloadAction<IUserStore>) => {
+                state.isLogin = true;
+                state.data = action.payload;
+                localStorage.setItem('userId', action.payload.id);
+            })
+            .addCase(getCurrentUser.rejected, (state) => {
+                state.isLogin = false;
+                state.data = initialState.data;
+                localStorage.removeItem('userId');
+            });
     },
 });
 

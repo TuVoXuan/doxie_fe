@@ -74,13 +74,6 @@ export default function Layout({ children, background }: Props) {
                                     <p className="name-container__greeting">Hello</p>
                                     <p className="name-container__name">{sUser.data.name}</p>
                                 </div>
-                                <div className="user-info__avatar-container">
-                                    <img
-                                        className="avatar-container__image"
-                                        src={sUser.data.avatar}
-                                        alt="avatar"
-                                    />
-                                </div>
                             </div>
                         ) : (
                             <Button title="Sign in" type="primay" onClick={handleGoSignIn} />

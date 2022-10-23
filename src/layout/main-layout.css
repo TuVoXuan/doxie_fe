@@ -78,20 +78,6 @@
     color: var(--black-80);
 }
 
-.user-info__avatar-container {
-    height: 36px;
-    width: 36px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid white;
-}
-
-.avatar-container__image {
-    object-fit: cover;
-    height: inherit;
-    width: 100%;
-}
-
 .header-right__cart-button {
     display: flex;
     background: var(--gray-10);

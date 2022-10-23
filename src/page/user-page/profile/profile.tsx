@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import Button from '../../../components/button/button';
+import LoadingButton from '../../../components/button/loading-btn';
 import InputForm from '../../../components/input-form/input-form';
 import SelectForm from '../../../components/select-form/select-form';
 import Title from '../../../components/title/Title';
@@ -36,14 +37,19 @@ export default function Profile() {
     const [provinces, setProvinces] = useState<IOption[]>([]);
     const [districts, setDistricts] = useState<IOption[]>([]);
     const [wards, setWards] = useState<IOption[]>([]);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const watchProvince = watch('province');
     const watchDistrict = watch('district');
 
     const onSubmit = async (value: IUpdateProfile) => {
         try {
+            setLoading(true);
             await dispatch(updateProfile({ userId: sUser.data.id, ...value })).unwrap();
-            toastSuccess('Update profile successfully');
+            setTimeout(() => {
+                toastSuccess('Update profile successfully');
+                setLoading(false);
+            }, 2000);
         } catch (error: any) {
             toastError(error.message);
         }
@@ -107,6 +113,22 @@ export default function Profile() {
                             title="email"
                             type="email"
                         />
+                        <InputForm
+                            name="streetAddress"
+                            register={register}
+                            option={{
+                                required: {
+                                    value: true,
+                                    message: 'Fill in your street address.',
+                                },
+                            }}
+                            className={styles.form__input}
+                            error={errors.streetAddress?.message}
+                            title="street address"
+                            type="text"
+                        />
+                    </aside>
+                    <aside>
                         <SelectForm
                             className={styles.form__input}
                             register={register}
@@ -149,33 +171,13 @@ export default function Profile() {
                             title="Ward"
                             options={wards}
                         />
-                        <InputForm
-                            name="streetAddress"
-                            register={register}
-                            option={{
-                                required: {
-                                    value: true,
-                                    message: 'Fill in your street address.',
-                                },
-                            }}
-                            className={styles.form__input}
-                            error={errors.streetAddress?.message}
-                            title="street address"
-                            type="text"
-                        />
-                    </aside>
-                    <aside className={styles.form_avatarContainer}>
-                        <img
-                            className={styles.form__avatar}
-                            src="https://res.cloudinary.com/cake-shop/image/upload/v1666171462/avatar/cvnjyfjhgxdwz2zzth4n.jpg"
-                            alt="avatar"
-                        />
-                        <input type="file" name="avatar" id="avatar" hidden />
-
-                        <Button title="Select image" />
                     </aside>
                 </form>
-                <Button submit form="UpdateProfileForm" title="Save" type="primay" />
+                {loading ? (
+                    <LoadingButton />
+                ) : (
+                    <Button submit form="UpdateProfileForm" title="Save" type="primay" />
+                )}
             </div>
         </aside>
     );

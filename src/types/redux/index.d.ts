@@ -7,7 +7,6 @@ declare interface IUserStore {
     province: string;
     district: string;
     ward: string;
-    avatar: string;
 }
 
 declare interface ISignIn {

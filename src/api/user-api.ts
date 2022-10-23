@@ -13,7 +13,6 @@ const userApi = {
                         data: {
                             id: user.id,
                             name: user.name,
-                            avatar: user.avatar,
                             email: user.email,
                             phone: user.phone,
                             district: user.district,
@@ -55,7 +54,6 @@ const userApi = {
                 streetAddress: data.streetAddress,
                 password: hashPasswords(data.password),
                 ward: data.ward,
-                avatar: './assets/images/avatar.jpg',
             };
 
             users.push(newUser);
@@ -71,7 +69,6 @@ const userApi = {
                     province: newUser.province,
                     streetAddress: newUser.streetAddress,
                     ward: newUser.ward,
-                    avatar: newUser.avatar,
                 },
             });
         });
@@ -110,6 +107,28 @@ const userApi = {
                         streetAddress: user.streetAddress,
                     },
                 });
+            }
+        });
+    },
+    getCurrentUser: (userId: string) => {
+        return new Promise<IResAuth>((resolve, reject) => {
+            const user = users.find((curUser) => curUser.id === userId);
+            if (user) {
+                return resolve({
+                    message: 'Get current user successfully',
+                    data: {
+                        id: user.id,
+                        name: user.name,
+                        email: user.email,
+                        phone: user.phone,
+                        district: user.district,
+                        province: user.province,
+                        streetAddress: user.streetAddress,
+                        ward: user.ward,
+                    },
+                });
+            } else {
+                return reject({ message: 'User not found' });
             }
         });
     },
