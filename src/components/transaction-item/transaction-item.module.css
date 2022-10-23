@@ -84,7 +84,7 @@
 }
 
 .body__order--details {
-    text-align: end;
+    text-align: center;
     font-weight: bold;
     cursor: pointer;
     padding: 12px;
