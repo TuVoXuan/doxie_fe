@@ -79,7 +79,7 @@ export default function Layout({ children, background }: Props) {
                 </section>
             </header>
 
-            <main className="px-10 mb-25">{children}</main>
+            <main className={`px-10 mb-25 ${handleBackground()}`}>{children}</main>
 
             <footer className="footer px-10">
                 <div className="footer__des">
