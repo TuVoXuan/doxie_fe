@@ -10,5 +10,5 @@
     align-items: center;
     color: var(--gray-80);
     column-gap: 12px;
-    margin: 32px 0;
+    padding: 32px 0;
 }
