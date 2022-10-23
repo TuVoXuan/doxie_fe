@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useAppSelector } from '../../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import Button from '../../../components/button/button';
 import InputForm from '../../../components/input-form/input-form';
 import SelectForm from '../../../components/select-form/select-form';
 import Title from '../../../components/title/Title';
+import { users } from '../../../fake-data/user';
+import { updateProfile } from '../../../redux/actions/user-actions';
 import { selectUser } from '../../../redux/reducers/user-slice';
 import { getDistricts, getProvinces, getWards } from '../../../utils/province-api';
+import { toastError, toastSuccess } from '../../../utils/toast';
 import styles from './Profile.module.css';
 
 export default function Profile() {
+    const dispatch = useAppDispatch();
     const sUser = useAppSelector(selectUser);
 
     const {
@@ -36,9 +40,13 @@ export default function Profile() {
     const watchProvince = watch('province');
     const watchDistrict = watch('district');
 
-    const onSubmit = (value: IUpdateProfile) => {
-        console.log('value: ', value);
-        alert('submit');
+    const onSubmit = async (value: IUpdateProfile) => {
+        try {
+            await dispatch(updateProfile({ userId: sUser.data.id, ...value })).unwrap();
+            toastSuccess('Update profile successfully');
+        } catch (error: any) {
+            toastError(error.message);
+        }
     };
 
     useEffect(() => {
@@ -47,7 +55,6 @@ export default function Profile() {
 
     useEffect(() => {
         const provinceId = provinces.find((item) => item.value === watchProvince)?.id || '5';
-        console.log('provinces: ', provinces);
         getDistricts(provinceId, setDistricts);
     }, [watchProvince, provinces]);
 

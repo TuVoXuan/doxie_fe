@@ -20,6 +20,11 @@ declare interface IResAuth {
     data: IUserStore;
 }
 
+declare interface IResUpdateProfile {
+    message: string;
+    data: IUpdateProfile;
+}
+
 declare interface ISignUP {
     name: string;
     email: string;
@@ -32,6 +37,17 @@ declare interface ISignUP {
 }
 
 declare interface IUpdateProfile {
+    name: string;
+    email: string;
+    phone: string;
+    streetAddress: string;
+    province: string;
+    district: string;
+    ward: string;
+}
+
+declare interface IUpdateProfileData {
+    userId: string;
     name: string;
     email: string;
     phone: string;

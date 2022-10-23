@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-import { signIn, signUp } from '../actions/user-actions';
+import { signIn, signUp, updateProfile } from '../actions/user-actions';
 
 export interface IUserState {
     isLogin: boolean;
@@ -45,6 +45,15 @@ export const userSlice = createSlice({
                 state.isLogin = false;
                 state.data = initialState.data;
             });
+        builder.addCase(updateProfile.fulfilled, (state, action: PayloadAction<IUpdateProfile>) => {
+            state.data.name = action.payload.name;
+            state.data.phone = action.payload.phone;
+            state.data.email = action.payload.email;
+            state.data.province = action.payload.province;
+            state.data.district = action.payload.district;
+            state.data.ward = action.payload.ward;
+            state.data.streetAddress = action.payload.streetAddress;
+        });
     },
 });
 
