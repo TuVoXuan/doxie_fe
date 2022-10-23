@@ -30,3 +30,13 @@ declare interface ISignUP {
     ward: string;
     password: string;
 }
+
+declare interface IUpdateProfile {
+    name: string;
+    email: string;
+    phone: string;
+    streetAddress: string;
+    province: string;
+    district: string;
+    ward: string;
+}

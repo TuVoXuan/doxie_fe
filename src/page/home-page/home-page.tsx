@@ -118,7 +118,7 @@ export default function HomePage() {
                     slidesPerView={3}
                     navigation
                     onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSwiper={(swiper) => console.log(swiper)}
                 >
                     {pros.map((item) => (
                         <SwiperSlide key={item.id}>
