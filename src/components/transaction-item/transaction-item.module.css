@@ -73,6 +73,7 @@
 
 .body__order--total {
     font-size: 28px;
+    padding-right: 12px;
     font-weight: bold;
     text-align: end;
     position: relative;
@@ -86,8 +87,11 @@
     text-align: end;
     font-weight: bold;
     cursor: pointer;
+    padding: 12px;
+    transition: all 0.2s ease-in-out;
 }
 
 .body__order--details:hover {
-    opacity: 0.5;
+    color: white;
+    background-color: var(--black-80);
 }

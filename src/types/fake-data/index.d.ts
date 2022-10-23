@@ -28,7 +28,7 @@ declare interface IOrder {
     shippingFee: number;
     date: Date;
     total: number;
-    statetus: 'pending' | 'shipping' | 'delivered';
+    statetus: 'pending' | 'completed' | 'delivering';
 }
 
 declare interface IOrderDetail {

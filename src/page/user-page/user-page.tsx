@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation, useParams, useRoutes } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import { useAppSelector } from '../../app/hooks';
 import Navbar from '../../components/navbar/navbar';
 import NavbarItem from '../../components/navbar/navbar-item';
 import NavigateLink from '../../components/navigator/navigate-link';
 import Layout from '../../layout/layout';
+import { selectUser } from '../../redux/reducers/user-slice';
 import { useQuery } from '../../utils/router';
+import Profile from './profile/profile';
 import Transaction from './transaction/transaction';
 import styles from './user.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function UserPage() {
+    const sUser = useAppSelector(selectUser);
     const query = useQuery();
+    const navigate = useNavigate();
 
     const { id } = useParams();
 
@@ -47,7 +53,7 @@ export default function UserPage() {
 
     const handleRender = () => {
         if (location.pathname === '/user/profile') {
-            return <div>user profile</div>;
+            return <Profile />;
         } else if (location.pathname === '/user/transaction') {
             switch (type) {
                 case 'pending':
@@ -62,6 +68,12 @@ export default function UserPage() {
         }
         return null;
     };
+
+    useEffect(() => {
+        if (!sUser.isLogin) {
+            navigate('/sign-in');
+        }
+    }, []);
 
     return (
         <Layout background="gray">

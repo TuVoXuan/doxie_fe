@@ -20,14 +20,23 @@ export default function Transaction({ type }: Props) {
                 .filter((item) => item.statetus === 'pending' && user.id === item.userId)
                 .map((item) => item.id);
             break;
-
+        case 'delivering':
+            orderIds = orders
+                .filter((item) => item.statetus === 'delivering' && user.id === item.userId)
+                .map((item) => item.id);
+            break;
+        case 'completed':
+            orderIds = orders
+                .filter((item) => item.statetus === 'completed' && user.id === item.userId)
+                .map((item) => item.id);
+            break;
         default:
             break;
     }
 
     return (
         <aside className={style.container}>
-            <Title mainTitle="Pending" subTitle="Transaction" titleBold />
+            <Title mainTitle={type} subTitle="Transaction" titleBold />
             <hr className={style.line} />
             <section className={style.container__transactions}>
                 {orderIds.map((id) => (

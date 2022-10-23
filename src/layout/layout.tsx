@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import { useAppSelector } from '../app/hooks';
 import { selectUser } from '../redux/reducers/user-slice';
 import NavLink from '../components/navigator/nav-link';
+import Button from '../components/button/button';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
     children: React.ReactNode;
@@ -15,12 +17,21 @@ interface Props {
 
 export default function Layout({ children, background }: Props) {
     const sUser = useAppSelector(selectUser);
+    const navigate = useNavigate();
 
     const handleBackground = () => {
         if (background === 'gray') {
             return 'bg-gray-5';
         }
         return 'bg-white';
+    };
+
+    const handleGoSignIn = () => {
+        navigate('/sign-in');
+    };
+
+    const handleGoProfile = () => {
+        navigate('/user/profile');
     };
 
     return (
@@ -57,8 +68,8 @@ export default function Layout({ children, background }: Props) {
                 </section>
                 <section>
                     <div className="header__header-right">
-                        {sUser.isLogin && (
-                            <div className="header-right__user-info">
+                        {sUser.isLogin ? (
+                            <div onClick={handleGoProfile} className="header-right__user-info">
                                 <div className="user-info__name-container">
                                     <p className="name-container__greeting">Hello</p>
                                     <p className="name-container__name">{sUser.data.name}</p>
@@ -71,6 +82,8 @@ export default function Layout({ children, background }: Props) {
                                     />
                                 </div>
                             </div>
+                        ) : (
+                            <Button title="Sign in" type="primay" onClick={handleGoSignIn} />
                         )}
                         <button className="header-right__cart-button">
                             <FaShoppingCart className="cart-button__icon" size={16} />
