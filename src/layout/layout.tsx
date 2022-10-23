@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsSearch, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import './main-layout.css';
@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useAppSelector } from '../app/hooks';
 import { selectUser } from '../redux/reducers/user-slice';
 import NavLink from '../components/navigator/nav-link';
+import { products } from '../fake-data/product';
 
 interface Props {
     children: React.ReactNode;
@@ -15,13 +16,34 @@ interface Props {
 
 export default function Layout({ children, background }: Props) {
     const sUser = useAppSelector(selectUser);
-
+    const [key, setKey] = useState<string>('');
+    const [searchItems, setSearchItems] = useState<IProduct[]>([]);
+    const [hidden, setHidden] = useState(true);
     const handleBackground = () => {
         if (background === 'gray') {
             return 'bg-gray-5';
         }
         return 'bg-white';
     };
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            if (key) {
+                const outcome = products.filter((item) =>
+                    item.name.toLowerCase().includes(key.toLowerCase())
+                );
+                setSearchItems(outcome.slice(0, 10));
+                setHidden(false);
+            } else {
+                setSearchItems([]);
+                setHidden(true);
+            }
+        }, 1000);
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, [key]);
 
     return (
         <>
@@ -46,14 +68,38 @@ export default function Layout({ children, background }: Props) {
                             </li>
                         </ul>
                     </nav>
-                    <div className="header-left__search-box">
-                        <BsSearch size={16} />
-                        <input
-                            className="search-box__input"
-                            type="text"
-                            placeholder="What are you looking for?"
-                        />
-                    </div>
+                    <section className="header-left__search">
+                        <div className="autocomplete">
+                            <div className="header-left__search-box">
+                                <BsSearch size={16} />
+                                <input
+                                    onBlur={() => {
+                                        setTimeout(() => {
+                                            setHidden(true), setSearchItems([]), setKey('');
+                                        }, 500);
+                                    }}
+                                    value={key}
+                                    onChange={(value) => setKey(value.target.value)}
+                                    className="search-box__input"
+                                    type="text"
+                                    placeholder="What are you looking for?"
+                                />
+                            </div>
+                            {searchItems.length > 0 &&
+                                searchItems.map((item) => (
+                                    <p
+                                        onClick={() => console.log('hello')}
+                                        key={item.id}
+                                        className="header-left__search-item"
+                                    >
+                                        {item.name}
+                                    </p>
+                                ))}
+                            {key && searchItems.length === 0 && (
+                                <p className="header-left__search--not-found">No products found.</p>
+                            )}
+                        </div>
+                    </section>
                 </section>
                 <section>
                     <div className="header__header-right">
