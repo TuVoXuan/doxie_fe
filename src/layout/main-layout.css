@@ -78,7 +78,7 @@
     color: var(--black-80);
 }
 
-.header-right__cart-button {
+.header-right__button {
     display: flex;
     background: var(--gray-10);
     border: 2px solid var(--gray-20);

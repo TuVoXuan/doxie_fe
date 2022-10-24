@@ -4,11 +4,12 @@ import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import './main-layout.css';
 import logo from '../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
-import { useAppSelector } from '../app/hooks';
-import { selectUser } from '../redux/reducers/user-slice';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { selectUser, signOut } from '../redux/reducers/user-slice';
 import NavLink from '../components/navigator/nav-link';
 import Button from '../components/button/button';
 import { useNavigate } from 'react-router-dom';
+import { FiLogOut } from 'react-icons/fi';
 
 interface Props {
     children: React.ReactNode;
@@ -16,6 +17,7 @@ interface Props {
 }
 
 export default function Layout({ children, background }: Props) {
+    const dispatch = useAppDispatch();
     const sUser = useAppSelector(selectUser);
     const navigate = useNavigate();
 
@@ -32,6 +34,11 @@ export default function Layout({ children, background }: Props) {
 
     const handleGoProfile = () => {
         navigate('/user/profile');
+    };
+
+    const handleSignOut = () => {
+        dispatch(signOut());
+        navigate('/sign-in');
     };
 
     return (
@@ -78,9 +85,14 @@ export default function Layout({ children, background }: Props) {
                         ) : (
                             <Button title="Sign in" type="primay" onClick={handleGoSignIn} />
                         )}
-                        <button className="header-right__cart-button">
+                        <button className="header-right__button">
                             <FaShoppingCart className="cart-button__icon" size={16} />
                         </button>
+                        {sUser.isLogin ? (
+                            <button onClick={handleSignOut} className="header-right__button">
+                                <FiLogOut size={16} />
+                            </button>
+                        ) : null}
                     </div>
                 </section>
             </header>

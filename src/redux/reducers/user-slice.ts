@@ -24,7 +24,12 @@ const initialState: IUserState = {
 export const userSlice = createSlice({
     name: 'user',
     initialState,
-    reducers: {},
+    reducers: {
+        signOut: (state) => {
+            (state.isLogin = false), (state.data = initialState.data);
+            localStorage.removeItem('userId');
+        },
+    },
     extraReducers(builder) {
         builder
             .addCase(signIn.fulfilled, (state, action: PayloadAction<IUserStore>) => {
@@ -68,6 +73,7 @@ export const userSlice = createSlice({
             });
     },
 });
+export const { signOut } = userSlice.actions;
 
 export const selectUser = (state: RootState) => state.user;
 

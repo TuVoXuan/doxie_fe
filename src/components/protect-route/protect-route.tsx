@@ -1,18 +1,7 @@
-import { useNavigate } from 'react-router-dom';
-import { useAppSelector } from '../../app/hooks';
-import { selectUser } from '../../redux/reducers/user-slice';
+import { Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
-interface Props {
-    children: JSX.Element;
-}
-
-export default function ProtectRoute({ children }: Props) {
-    const sUser = useAppSelector(selectUser);
-    const navigate = useNavigate();
-    if (sUser.isLogin === false) {
-        navigate('/sign-in');
-        return <></>;
-    }
-
-    return children;
+export default function ProtectRoute() {
+    const userId = localStorage.getItem('userId');
+    return userId ? <Outlet /> : <Navigate to="/sign-in" />;
 }

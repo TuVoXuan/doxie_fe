@@ -21,18 +21,9 @@ export default function Profile() {
         register,
         handleSubmit,
         watch,
+        setValue,
         formState: { errors },
-    } = useForm<IUpdateProfile>({
-        defaultValues: {
-            name: sUser.data.name,
-            phone: sUser.data.phone,
-            email: sUser.data.email,
-            province: sUser.data.province,
-            district: sUser.data.district,
-            ward: sUser.data.ward,
-            streetAddress: sUser.data.streetAddress,
-        },
-    });
+    } = useForm<IUpdateProfile>();
 
     const [provinces, setProvinces] = useState<IOption[]>([]);
     const [districts, setDistricts] = useState<IOption[]>([]);
@@ -56,21 +47,47 @@ export default function Profile() {
     };
 
     useEffect(() => {
-        getProvinces(setProvinces);
+        if (sUser.isLogin) {
+            setValue('email', sUser.data.email);
+            setValue('phone', sUser.data.phone);
+            setValue('name', sUser.data.name);
+            setValue('streetAddress', sUser.data.streetAddress);
+            setValue('province', sUser.data.province);
+            setValue('district', sUser.data.district);
+            setValue('ward', sUser.data.ward);
+        }
+    }, [sUser, provinces]);
+
+    useEffect(() => {
+        if (provinces.length === 0) {
+            getProvinces(setProvinces);
+        }
     }, []);
 
     useEffect(() => {
-        const provinceId = provinces.find((item) => item.value === watchProvince)?.id || '5';
-        getDistricts(provinceId, setDistricts);
+        const timeOut = setTimeout(() => {
+            const provinceId = provinces.find((item) => item.value === watchProvince)?.id || '5';
+            getDistricts(provinceId, setDistricts);
+        }, 100);
+
+        return () => {
+            clearTimeout(timeOut);
+        };
     }, [watchProvince, provinces]);
 
     useEffect(() => {
-        const districtId = districts.find((item) => item.value === watchDistrict)?.id || '5';
-        getWards(districtId, setWards);
+        const timeOut = setTimeout(() => {
+            const districtId = districts.find((item) => item.value === watchDistrict)?.id || '5';
+            getWards(districtId, setWards);
+        }, 100);
+
+        return () => {
+            clearTimeout(timeOut);
+        };
     }, [watchProvince, watchDistrict, districts]);
 
     return (
-        <aside className={styles.container}>
+        <section className={styles.container}>
             <Title mainTitle="profile" subTitle="profile" titleBold />
             <hr className={styles.line} />
             <div className={styles.formContainer}>
@@ -179,6 +196,6 @@ export default function Profile() {
                     <Button submit form="UpdateProfileForm" title="Save" type="primay" />
                 )}
             </div>
-        </aside>
+        </section>
     );
 }

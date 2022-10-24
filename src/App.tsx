@@ -33,7 +33,7 @@ function App() {
         if (userId && sUser.isLogin === false) {
             getCurrUser(userId);
         }
-    }, []);
+    }, [sUser, userId]);
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
@@ -44,31 +44,10 @@ function App() {
                 <Route index element={<ClothesPage />} />
                 {/* <Route path=":parentCate" element={<ClothesDetail />} /> */}
             </Route>
-            <Route path="/user">
-                <Route
-                    path="profile"
-                    element={
-                        <ProtectRoute>
-                            <UserPage />
-                        </ProtectRoute>
-                    }
-                />
-                <Route
-                    path="transaction"
-                    element={
-                        <ProtectRoute>
-                            <UserPage />
-                        </ProtectRoute>
-                    }
-                >
-                    <Route
-                        path=":id"
-                        element={
-                            <ProtectRoute>
-                                <UserPage />
-                            </ProtectRoute>
-                        }
-                    />
+            <Route path="/user" element={<ProtectRoute />}>
+                <Route path="profile" element={<UserPage />} />
+                <Route path="transaction" element={<UserPage />}>
+                    <Route path=":id" element={<UserPage />} />
                 </Route>
             </Route>
 

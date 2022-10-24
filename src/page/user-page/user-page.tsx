@@ -69,12 +69,6 @@ export default function UserPage() {
         return null;
     };
 
-    useEffect(() => {
-        if (!sUser.isLogin) {
-            navigate('/sign-in');
-        }
-    }, []);
-
     return (
         <Layout background="gray">
             <NavigateLink navigators={handleNavigator()} />
