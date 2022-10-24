@@ -1,0 +1,58 @@
+export const orderDetails: IOrderDetail[] = [
+    {
+        id: '0f908033-9ade-4313-9fb2-732d305930a8',
+        price: 50,
+        productId: 'f76731c6-cd74-449a-bcef-40eb5d55584f',
+        quantity: 2,
+        size: 'M',
+    },
+    {
+        id: 'ec248daa-98a1-42e6-af4e-61d9d7749fa2',
+        price: 50,
+        productId: 'c2e19e73-43ab-4840-b55c-1296a824932a',
+        quantity: 1,
+        size: 'L',
+    },
+    {
+        id: 'f5b48d4a-3468-4bd8-a8b8-706c0e5e8cfc',
+        price: 12.99,
+        productId: '5fdcbeae-b9ea-40a4-bd2b-ca775fb0ff76',
+        quantity: 1,
+        size: 'L',
+    },
+    {
+        id: 'b102d205-b4de-4be1-bf44-db7dfe2514f6',
+        price: 14.99,
+        productId: 'd081169e-7462-44dd-ad1a-288bc6874775',
+        quantity: 1,
+        size: 'L',
+    },
+    {
+        id: '862cbb3d-b12b-42c5-93ff-b54bd054e0fc',
+        price: 17.99,
+        productId: 'be6199de-ddc6-4d1e-83e8-ae0e8e07516c',
+        quantity: 1,
+        size: 'M',
+    },
+    {
+        id: 'e1eb6550-0f4b-4f83-99bd-38d644d9fec3',
+        price: 49.99,
+        productId: '6b2236ef-9fd3-4638-89b7-1f52a02180e5',
+        quantity: 1,
+        size: 'XL',
+    },
+    {
+        id: '717c7b0f-8bd5-456a-8cf2-981ca56e6f7c',
+        price: 119.99,
+        productId: '38778a11-e3cb-4f59-8254-a349b6f8e5d6',
+        quantity: 1,
+        size: 'XL',
+    },
+    {
+        id: '508ac817-3267-487a-8ae9-32a0cf36bf28',
+        price: 179.99,
+        productId: 'ff8f42fc-f034-4018-9d69-c514a6515aed',
+        quantity: 2,
+        size: 'L',
+    },
+];

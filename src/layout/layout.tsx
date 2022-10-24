@@ -4,9 +4,12 @@ import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import './main-layout.css';
 import logo from '../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
-import { useAppSelector } from '../app/hooks';
-import { selectUser } from '../redux/reducers/user-slice';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { selectUser, signOut } from '../redux/reducers/user-slice';
 import NavLink from '../components/navigator/nav-link';
+import Button from '../components/button/button';
+import { useNavigate } from 'react-router-dom';
+import { FiLogOut } from 'react-icons/fi';
 import { products } from '../fake-data/product';
 
 interface Props {
@@ -15,7 +18,9 @@ interface Props {
 }
 
 export default function Layout({ children, background }: Props) {
+    const dispatch = useAppDispatch();
     const sUser = useAppSelector(selectUser);
+    const navigate = useNavigate();
     const [key, setKey] = useState<string>('');
     const [searchItems, setSearchItems] = useState<IProduct[]>([]);
     const [hidden, setHidden] = useState(true);
@@ -24,6 +29,19 @@ export default function Layout({ children, background }: Props) {
             return 'bg-gray-5';
         }
         return 'bg-white';
+    };
+
+    const handleGoSignIn = () => {
+        navigate('/sign-in');
+    };
+
+    const handleGoProfile = () => {
+        navigate('/user/profile');
+    };
+
+    const handleSignOut = () => {
+        dispatch(signOut());
+        navigate('/sign-in');
     };
 
     useEffect(() => {
@@ -103,24 +121,24 @@ export default function Layout({ children, background }: Props) {
                 </section>
                 <section>
                     <div className="header__header-right">
-                        {sUser.isLogin && (
-                            <div className="header-right__user-info">
+                        {sUser.isLogin ? (
+                            <div onClick={handleGoProfile} className="header-right__user-info">
                                 <div className="user-info__name-container">
                                     <p className="name-container__greeting">Hello</p>
                                     <p className="name-container__name">{sUser.data.name}</p>
                                 </div>
-                                <div className="user-info__avatar-container">
-                                    <img
-                                        className="avatar-container__image"
-                                        src={sUser.data.avatar}
-                                        alt="avatar"
-                                    />
-                                </div>
                             </div>
+                        ) : (
+                            <Button title="Sign in" type="primay" onClick={handleGoSignIn} />
                         )}
-                        <button className="header-right__cart-button">
+                        <button className="header-right__button">
                             <FaShoppingCart className="cart-button__icon" size={16} />
                         </button>
+                        {sUser.isLogin ? (
+                            <button onClick={handleSignOut} className="header-right__button">
+                                <FiLogOut size={16} />
+                            </button>
+                        ) : null}
                     </div>
                 </section>
             </header>
