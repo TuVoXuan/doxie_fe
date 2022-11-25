@@ -30,3 +30,19 @@ declare interface ISignUP {
     ward: string;
     password: string;
 }
+
+declare interface ICartItem {
+    id: string;
+    productId: string;
+    name: string;
+    quantity: number;
+    defaultImg: string;
+    size: string;
+    price: number;
+    category: string;
+}
+
+declare interface IChangeQuantity {
+    id: string;
+    type: 'increase' | 'decrease';
+}

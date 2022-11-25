@@ -3,7 +3,7 @@ import { BsSearch, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import './main-layout.css';
 import logo from '../assets/images/logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../app/hooks';
 import { selectUser } from '../redux/reducers/user-slice';
 import NavLink from '../components/navigator/nav-link';
@@ -15,12 +15,17 @@ interface Props {
 
 export default function Layout({ children, background }: Props) {
     const sUser = useAppSelector(selectUser);
+    const navigate = useNavigate();
 
     const handleBackground = () => {
         if (background === 'gray') {
             return 'bg-gray-5';
         }
         return 'bg-white';
+    };
+
+    const handleCartClick = () => {
+        navigate('/cart');
     };
 
     return (
@@ -72,13 +77,13 @@ export default function Layout({ children, background }: Props) {
                                 </div>
                             </div>
                         )}
-                        <button className="header-right__cart-button">
+                        <button onClick={handleCartClick} className="header-right__cart-button">
                             <FaShoppingCart className="cart-button__icon" size={16} />
                         </button>
                     </div>
                 </section>
             </header>
-
+            {/* bỏ class px-10 khi code --> thêm lại class px-10 khi up code để tránh conflict */}
             <main className="px-10 mb-25">{children}</main>
 
             <footer className="footer px-10">
