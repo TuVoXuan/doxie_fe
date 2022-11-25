@@ -60,7 +60,11 @@ export default function CartPage() {
                             ) : (
                                 <div>
                                     <div className={styles.empty_cart}>
-                                        <img src="assets/images/avatar.jpg" alt="empty-cart" />
+                                        <img
+                                            className={styles.empty_cart__image}
+                                            src="assets/images/add_to_card.svg"
+                                            alt="empty-cart"
+                                        />
                                     </div>
                                     <p
                                         className={`${styles.empty_cart_title} ${styles['font--bold']} ${styles.margin_bot_20}`}

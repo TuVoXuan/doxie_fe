@@ -62,7 +62,12 @@
 }
 
 .empty_cart {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.empty_cart__image {
+    width: 50%;
 }
 
 .empty_cart_title {
