@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    column-gap: 44px;
+}
+
+.container__navBar {
+    width: 252px;
+}
+
+.profileContainer {
+    background-color: red;
+    width: 100%;
+}

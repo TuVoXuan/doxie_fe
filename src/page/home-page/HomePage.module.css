@@ -1,13 +1,498 @@
-.categories {
-    text-align: center;
-    color: blue;
-    font-size: 0.5rem;
-    font-weight: 800;
+/* Promotions */
+.promotions {
+    height: 570px;
+    margin-bottom: 100px;
 }
 
-.text {
+.promotions .promotionContent {
+    text-align: center;
+}
+.promotions .promotionContent .promotionContentColor {
+    color: var(--blue-50);
+    font-weight: 700;
+}
+
+.promotions .promotionAll {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+}
+
+.promotions .promotionAll .promotionSell {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 12px;
+}
+
+.promotions .promotionAll .promotionSell .promotionSellUpBackground {
+    background-color: #d6d6d8;
+    position: relative;
+}
+
+.promotions .promotionAll .promotionSell .promotionSellUpBackground .promotionSellUpContent {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellUpBackground
+    .promotionSellUpContent
+    .promotionSellUpContentMain {
+    display: flex;
+    column-gap: 8px;
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellUpBackground
+    .promotionSellUpContent
+    .promotionSellUpContentMain
+    .promotionSellUpContentMain1 {
+    float: left;
+    align-self: flex-end;
+    margin: 0;
+    font-size: 32px;
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellUpBackground
+    .promotionSellUpContent
+    .promotionSellUpContentMain
+    .promotionSellUpContentMain2 {
+    float: left;
+    font-weight: 800;
+    font-size: 36px;
+    margin: 0;
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellUpBackground
+    .promotionSellUpContent
+    .promotionSellUpContentSub {
+    font-weight: 400;
+    font-size: 18px;
+}
+.promotions .promotionAll .promotionSell .promotionSellUpBackground .promotionSellUpImage {
+    object-fit: cover;
+    height: 100%;
+    float: right;
+}
+
+.promotions .promotionAll .promotionSell .promotionSellBottomBackground {
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellBottomBackground
+    .promotionSellBottomColorWord {
+    color: white;
+}
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellBottomBackground
+    .promotionSellBottomColorWord
+    .promotionSellBottomMain {
+    font-size: 36px;
+    text-align: center;
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellBottomBackground
+    .promotionSellBottomColorWord
+    .promotionSellBottomSpace1 {
+    height: 12px;
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellBottomBackground
+    .promotionSellBottomColorWord
+    .promotionSellBottomSup {
+    text-align: center;
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellBottomBackground
+    .promotionSellBottomColorWord
+    .promotionSellBottomSpace2 {
+    height: 4px;
+}
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellBottomBackground
+    .promotionSellBottomColorWord
+    .promotionSellBottomSupBox {
+    padding: 10px 46px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+}
+
+.promotions
+    .promotionAll
+    .promotionSell
+    .promotionSellBottomBackground
+    .promotionSellBottomColorWord
+    .promotionSellBottomSupBox
+    .promotionSellBottomSupBoxWord {
+    color: white;
+    opacity: 1;
+}
+
+.promotions .promotionAll .promotionDiscount {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+}
+
+.promotions .promotionAll .promotionDiscount .promotionDiscountLeft {
+    display: flex;
+    background-color: #efe1c7;
+    position: relative;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountLeft
+    .promotionDiscountLeftBoxContent {
+    position: absolute;
+    left: 24px;
+    top: 20px;
+}
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountLeft
+    .promotionDiscountLeftBoxContent
+    .promotionDiscountLeftContent {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountLeft
+    .promotionDiscountLeftBoxContent
+    .promotionDiscountLeftSpace {
+    height: 8px;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountLeft
+    .promotionDiscountLeftBoxContent
+    .promotionDiscountLeftPrice {
+    display: flex;
+    column-gap: 14px;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountLeft
+    .promotionDiscountLeftBoxContent
+    .promotionDiscountLeftPrice
+    .promotionDiscountLeftPrice1 {
+    font-size: 20px;
+    align-self: flex-end;
+    font-weight: 500;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountLeft
+    .promotionDiscountLeftBoxContent
+    .promotionDiscountLeftPrice
+    .promotionDiscountLeftPrice2 {
+    font-size: 24px;
+}
+
+.promotions .promotionAll .promotionDiscount .promotionDiscountLeft .promotionDiscountLeftImage {
+    bottom: 0;
+}
+
+.promotions .promotionAll .promotionDiscount .promotionDiscountRight {
+    display: flex;
+    background-color: #d6d6d8;
+    position: relative;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountRight
+    .promotionDiscountRightBoxContent {
+    position: absolute;
+    left: 24px;
+    top: 20px;
+}
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountRight
+    .promotionDiscountRightBoxContent
+    .promotionDiscountRightContent {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountRight
+    .promotionDiscountRightBoxContent
+    .promotionDiscountRightSpace {
+    height: 8px;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountRight
+    .promotionDiscountRightBoxContent
+    .promotionDiscountRightPrice {
+    display: flex;
+    column-gap: 14px;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountRight
+    .promotionDiscountRightBoxContent
+    .promotionDiscountRightPrice
+    .promotionDiscountRightPrice1 {
+    font-size: 20px;
+    align-self: flex-end;
+    font-weight: 500;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.promotions
+    .promotionAll
+    .promotionDiscount
+    .promotionDiscountRight
+    .promotionDiscountRightBoxContent
+    .promotionDiscountRightPrice
+    .promotionDiscountRightPrice2 {
+    font-size: 24px;
+}
+
+.promotions .promotionAll .promotionDiscount .promotionDiscountRight .promotionDiscountRightImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Products */
+.productsSection {
+    margin-bottom: 100px;
+}
+.categories {
+    text-align: center;
+    color: var(--blue-50);
+    font-weight: 700;
+}
+
+.title {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
     line-height: 200%;
+}
+
+/* Description */
+
+.title__wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.title__wrapper h1 {
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.descriptionContainer {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.productInfo__container {
+    display: flex;
+    align-items: center;
+}
+
+.product__info--wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 40px;
+    column-gap: 52px;
+    margin-right: 121px;
+}
+.product__info--wrapper::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: 'Different from other';
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 100px;
+    color: var(--black-80);
+    opacity: 0.05;
+    width: 40%;
+}
+
+.wrapper {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.wrapper .wrapper__img {
+    display: inline-block;
+    width: 50%;
+}
+
+.wrapper .wrapper__img .product__img {
+    width: 100%;
+}
+
+.wrapper .wrapper__detail {
+    display: inline-block;
+    width: 50%;
+}
+
+.product__title {
+    font-weight: 700;
+    height: 33.6px;
+    font-size: 15px;
+}
+.product__description {
+    word-spacing: 3px;
+    line-height: 2;
+}
+
+.wrapper .wrapper__img {
+    vertical-align: top;
+}
+
+.wrapper .wrapper__detail {
+    vertical-align: top;
+    word-spacing: 3px;
+    line-height: 2;
+    padding-left: 10x;
+    text-align: justify;
+}
+
+.wrapper__detail button {
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: black;
+    color: #fff;
+    padding: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+    .product__info--wrapper {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product__information .product__title {
+        padding-bottom: 20px;
+    }
+    .wrapper .wrapper__img {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .wrapper .wrapper__detail {
+        width: 100%;
+    }
+}
+
+.container__email {
+    position: relative;
+    background-size: cover;
+    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+}
+.container__email::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: 'Newsletter';
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 100px;
+    color: var(--black-80);
+    opacity: 0.05;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.container__email p {
+    max-width: 800px;
+    margin: 10px auto;
+    font-size: 13px;
+    font-weight: 300;
+}
+.container__email h1 {
+    font-size: 30px;
+}
+.email__box {
+    height: 40px;
+    justify-content: center;
+    display: flex; /*its better to use inline-flex*/
+    margin-top: 40px;
+}
+
+.tbox {
+    width: 200px;
+    transition: 0.6s;
+}
+.email__box:hover > .tbox,
+.tbox:focus {
+    width: 260px;
+    padding: 0 10px;
+}
+.btn {
+    background: #2f3542;
+    color: white;
+    padding: 0 10px;
+    text-transform: uppercase;
+    cursor: pointer;
 }

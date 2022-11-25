@@ -13,7 +13,6 @@ const userApi = {
                         data: {
                             id: user.id,
                             name: user.name,
-                            avatar: user.avatar,
                             email: user.email,
                             phone: user.phone,
                             district: user.district,
@@ -55,7 +54,6 @@ const userApi = {
                 streetAddress: data.streetAddress,
                 password: hashPasswords(data.password),
                 ward: data.ward,
-                avatar: './assets/images/avatar.jpg',
             };
 
             users.push(newUser);
@@ -71,9 +69,67 @@ const userApi = {
                     province: newUser.province,
                     streetAddress: newUser.streetAddress,
                     ward: newUser.ward,
-                    avatar: newUser.avatar,
                 },
             });
+        });
+    },
+    updateProfile: (data: IUpdateProfileData) => {
+        return new Promise<IResUpdateProfile>((resolve, reject) => {
+            const userEmail = users.find((user) => user.email === data.email);
+            if (userEmail && userEmail.id !== data.userId) {
+                return reject({ message: 'Email has been used' });
+            }
+
+            const userPhone = users.find((user) => user.phone === data.phone);
+            if (userPhone && userPhone.id !== data.userId) {
+                return reject({ message: 'Phone has been used' });
+            }
+
+            const user = users.find((u) => u.id === data.userId);
+            if (user) {
+                user.name = data.name;
+                user.email = data.email;
+                user.phone = data.phone;
+                user.district = data.district;
+                user.province = data.province;
+                user.ward = data.ward;
+                user.streetAddress = data.streetAddress;
+
+                return resolve({
+                    message: 'Login successfully',
+                    data: {
+                        name: user.name,
+                        email: user.email,
+                        phone: user.phone,
+                        district: user.district,
+                        province: user.province,
+                        ward: user.ward,
+                        streetAddress: user.streetAddress,
+                    },
+                });
+            }
+        });
+    },
+    getCurrentUser: (userId: string) => {
+        return new Promise<IResAuth>((resolve, reject) => {
+            const user = users.find((curUser) => curUser.id === userId);
+            if (user) {
+                return resolve({
+                    message: 'Get current user successfully',
+                    data: {
+                        id: user.id,
+                        name: user.name,
+                        email: user.email,
+                        phone: user.phone,
+                        district: user.district,
+                        province: user.province,
+                        streetAddress: user.streetAddress,
+                        ward: user.ward,
+                    },
+                });
+            } else {
+                return reject({ message: 'User not found' });
+            }
         });
     },
 };

@@ -1,5 +1,5 @@
 :root {
-    --gray-5: #fbfcff;
+    --gray-5: #f2f4f9;
     --gray-10: #f1f1f1;
     --gray-20: #c4c4c4;
     --gray-70: #888888;
@@ -7,7 +7,12 @@
 
     --black-80: #212121;
 
+    --brow-80: #d6d6d8;
+    --orange-15: #efe1c7;
     --orange-20: #ffceae;
 
     --red-40: #ef4444;
+
+    --blue-5: #d6e7ff;
+    --blue-50: #0062f5;
 }
