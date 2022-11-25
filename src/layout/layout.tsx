@@ -3,12 +3,11 @@ import { BsSearch, BsTwitter } from 'react-icons/bs';
 import { FaFacebookF, FaLinkedinIn, FaShoppingCart } from 'react-icons/fa';
 import './main-layout.css';
 import logo from '../assets/images/logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { selectUser, signOut } from '../redux/reducers/user-slice';
 import NavLink from '../components/navigator/nav-link';
 import Button from '../components/button/button';
-import { useNavigate } from 'react-router-dom';
 import { FiLogOut } from 'react-icons/fi';
 import { products } from '../fake-data/product';
 
@@ -62,6 +61,10 @@ export default function Layout({ children, background }: Props) {
             clearTimeout(timeout);
         };
     }, [key]);
+
+    const handleCartClick = () => {
+        navigate('/cart');
+    };
 
     return (
         <>
@@ -131,7 +134,7 @@ export default function Layout({ children, background }: Props) {
                         ) : (
                             <Button title="Sign in" type="primay" onClick={handleGoSignIn} />
                         )}
-                        <button className="header-right__button">
+                        <button onClick={handleCartClick} className="header-right__cart-button">
                             <FaShoppingCart className="cart-button__icon" size={16} />
                         </button>
                         {sUser.isLogin ? (

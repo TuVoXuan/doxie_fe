@@ -13,6 +13,7 @@ import { selectUser } from './redux/reducers/user-slice';
 import { getCurrentUser } from './redux/actions/user-actions';
 import { useNavigate } from 'react-router-dom';
 import ProtectRoute from './components/protect-route/protect-route';
+import CartPage from 'page/cart-page/cart-page';
 
 function App() {
     const dispatch = useAppDispatch();
@@ -39,6 +40,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/sign-in" element={<SignInPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/cart" element={<CartPage />} />
             <Route path="/counter" element={<CounterPage />} />
             <Route path="/clothes">
                 <Route index element={<ClothesPage />} />
