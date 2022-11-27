@@ -32,6 +32,9 @@ export default function SignUpPage() {
     const watchProvince = watch('province');
     const watchDistrict = watch('district');
 
+    console.log('watch province: ', watchProvince);
+    console.log('watch district: ', watchDistrict);
+
     const onSubmit = async (value: any) => {
         console.log('value: ', value);
 

@@ -36,7 +36,7 @@ declare interface IOrderDetail {
     price: number;
     productId: string;
     quantity: number;
-    size: 'XS' | 'S' | 'M' | 'L' | 'XL';
+    size: string;
 }
 
 declare interface IUser {

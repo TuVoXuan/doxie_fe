@@ -57,10 +57,13 @@ export const cartSlice = createSlice({
                 }
             }
         },
+        removeAll: (state) => {
+            state.splice(0);
+        },
     },
 });
 
-export const { remove, changeQuantity } = cartSlice.actions;
+export const { remove, changeQuantity, removeAll } = cartSlice.actions;
 
 export const selectCart = (state: RootState) => state.cart;
 
