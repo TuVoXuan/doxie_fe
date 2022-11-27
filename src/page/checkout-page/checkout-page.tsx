@@ -1,11 +1,18 @@
+import { useAppDispatch, useAppSelector } from 'app/hooks';
 import InputForm from 'components/input-form/input-form';
 import SelectForm from 'components/select-form/select-form';
 import Title from 'components/title/Title';
 import Layout from 'layout/layout';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { removeAll, selectCart } from 'redux/reducers/cart-slice';
 import { getDistricts, getProvinces, getWards } from 'utils/province-api';
 import styles from './checkout.module.css';
+import { v4 as uuidv4 } from 'uuid';
+import { selectUser } from 'redux/reducers/user-slice';
+import { orderDetails } from 'fake-data/order-detail';
+import { orders } from 'fake-data/order';
+import { useNavigate } from 'react-router-dom';
 
 export default function CheckoutPage() {
     const {
@@ -16,6 +23,19 @@ export default function CheckoutPage() {
         formState: { errors },
     } = useForm<IFormCheckOut>();
 
+    const dispatch = useAppDispatch();
+    const sCart = useAppSelector(selectCart);
+    const user = useAppSelector(selectUser);
+    const navigate = useNavigate();
+
+    const totalQuantity = sCart.reduce((preValue, currValue) => {
+        return preValue + currValue.quantity;
+    }, 0);
+
+    const subTotal = sCart.reduce((preValue, currValue) => {
+        return preValue + currValue.quantity * currValue.price;
+    }, 0);
+    const total = subTotal + 21;
     const [provinces, setProvinces] = useState<IOption[]>([]);
     const [districts, setDistricts] = useState<IOption[]>([]);
     const [wards, setWards] = useState<IOption[]>([]);
@@ -25,8 +45,46 @@ export default function CheckoutPage() {
 
     const submitForm = (value: IFormCheckOut) => {
         console.log(value);
-    };
+        // add product in cart to order detail fake data
+        const orderDetail: string[] = [];
+        for (let index = 0; index < sCart.length; index++) {
+            const item: IOrderDetail = {
+                id: uuidv4(),
+                price: sCart[index].price,
+                productId: sCart[index].productId,
+                quantity: sCart[index].quantity,
+                size: sCart[index].size,
+            };
+            orderDetails.push(item);
+            orderDetail.push(item.id);
+        }
 
+        // create new order
+        const newOrder: IOrder = {
+            id: uuidv4(),
+            date: new Date(),
+            district: value.district,
+            province: value.province,
+            ward: value.ward,
+            phone: value.phone,
+            streetAddress: value.streetAddress,
+            total: total,
+            shippingFee: 5,
+            statetus: 'pending',
+            userId: user.data.id,
+            orderDetailId: orderDetail,
+        };
+
+        // add new order
+        orders.push(newOrder);
+        // remove cart
+        dispatch(removeAll());
+        // go to detail order page
+        navigate('/');
+    };
+    const goBack = () => {
+        navigate('/cart');
+    };
     useEffect(() => {
         getProvinces(setProvinces);
     }, []);
@@ -140,7 +198,7 @@ export default function CheckoutPage() {
                             </form>
 
                             <div className={styles.bottomForm}>
-                                <button className={styles.buttonBack}>
+                                <button onClick={goBack} className={styles.buttonBack}>
                                     <span className={styles.inButtonBack}>Back</span>
                                 </button>
                                 <button
@@ -159,11 +217,15 @@ export default function CheckoutPage() {
                                 <div className={styles.billSummary}>
                                     <p className={styles.billSummaryLine}>
                                         Quanlity
-                                        <span className={styles.billSummaryLeft}>5Product</span>
+                                        <span className={styles.billSummaryLeft}>
+                                            {totalQuantity} Products
+                                        </span>
                                     </p>
                                     <p className={styles.billSummaryLine}>
                                         Sub Total
-                                        <span className={styles.billSummaryLeft}>$140</span>
+                                        <span className={styles.billSummaryLeft}>
+                                            ${subTotal.toLocaleString()}
+                                        </span>
                                     </p>
                                     <p className={styles.billSummaryLine}>
                                         Tax<span className={styles.billSummaryLeft}>$5</span>
@@ -177,7 +239,8 @@ export default function CheckoutPage() {
                                     </p>
                                 </div>
                                 <p className={styles.billSummaryLineTotal}>
-                                    Total<span className={styles.billSummaryLeftTotal}>$161</span>
+                                    Total
+                                    <span className={styles.billSummaryLeftTotal}>${total}</span>
                                 </p>
                             </div>
                         </aside>
