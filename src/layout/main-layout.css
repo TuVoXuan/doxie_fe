@@ -84,6 +84,15 @@
     cursor: pointer;
 }
 
+.header-right__cart-button {
+    display: flex;
+    background: var(--gray-10);
+    border: 2px solid var(--gray-20);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
 /* Footer */
 
 .footer {

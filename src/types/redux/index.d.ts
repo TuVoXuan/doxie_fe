@@ -55,3 +55,19 @@ declare interface IUpdateProfileData {
     district: string;
     ward: string;
 }
+
+declare interface ICartItem {
+    id: string;
+    productId: string;
+    name: string;
+    quantity: number;
+    defaultImg: string;
+    size: string;
+    price: number;
+    category: string;
+}
+
+declare interface IChangeQuantity {
+    id: string;
+    type: 'increase' | 'decrease';
+}
