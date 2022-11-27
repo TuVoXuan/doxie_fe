@@ -13,7 +13,7 @@ import { selectUser } from './redux/reducers/user-slice';
 import { getCurrentUser } from './redux/actions/user-actions';
 import { useNavigate } from 'react-router-dom';
 import ProtectRoute from './components/protect-route/protect-route';
-
+import CheckoutPage from './page/checkout-page/checkout-page';
 function App() {
     const dispatch = useAppDispatch();
     const sUser = useAppSelector(selectUser);
@@ -40,6 +40,7 @@ function App() {
             <Route path="/sign-in" element={<SignInPage />} />
             <Route path="/sign-up" element={<SignUpPage />} />
             <Route path="/counter" element={<CounterPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/clothes">
                 <Route index element={<ClothesPage />} />
                 {/* <Route path=":parentCate" element={<ClothesDetail />} /> */}

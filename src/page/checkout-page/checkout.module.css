@@ -1,0 +1,163 @@
+.formCheckout {
+    background-color: white;
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 40px;
+}
+
+.content {
+    border-top: #f1f1f1 solid 2px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding-bottom: 50px;
+}
+.personalInformation {
+    padding-right: 100px;
+    border-right: #f1f1f1 solid 2px;
+    position: relative;
+}
+
+.formName {
+    width: 300px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+.formPhone {
+    width: 300px;
+    float: right;
+}
+
+.formstreetAddress {
+    padding-bottom: 20px;
+}
+
+.formProvince {
+    width: 300px;
+    padding-bottom: 20px;
+
+    display: inline-block;
+}
+
+.formDistrict {
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    right: 100px;
+}
+
+/* label{
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+/* input{
+    padding: 4px;
+    border-radius: 0.5em;
+    border: 1px solid #EEEEEE;
+    height: 30px;
+    width: 600px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+input::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #BBBBBB;
+} */
+/* select{
+    padding: 4px;
+    border-radius: 0.5em;
+    border: 1px solid #EEEEEE;
+    height: 30px;
+    width: 200px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+select:invalid{
+    color: #BBBBBB;
+    font-weight: 500;
+}
+option{
+    color: black;
+} */
+.selectCity {
+    position: absolute;
+    left: 410px;
+}
+.bill {
+    padding-left: 100px;
+}
+.billContent {
+    background-color: #fbfcff;
+    padding: 0px 20px 0px 20px;
+}
+.titleBill {
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    font-weight: 600;
+    border-bottom: #f1f1f1 solid 2px;
+}
+.billSummary {
+    padding-top: 15px;
+    border-bottom: #f1f1f1 solid 2px;
+    font-size: 14px;
+}
+.billSummaryLeft {
+    font-weight: 600;
+    float: right;
+}
+.billSummaryLine {
+    line-height: 50px;
+}
+
+.billSummaryLineTotal {
+    line-height: 70px;
+    height: 70px;
+    font-weight: 600;
+}
+
+.billSummaryLeftTotal {
+    font-weight: 800;
+    size: 20px;
+    float: right;
+}
+.buttonBack {
+    padding: 0;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.buttonNext {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: black;
+}
+.inButtonNext {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+.formInformation {
+    border-bottom: #f1f1f1 solid 2px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.bottomForm {
+    display: flex;
+    justify-content: space-between;
+}
