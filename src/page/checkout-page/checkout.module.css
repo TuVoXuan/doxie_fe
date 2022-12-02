@@ -6,6 +6,7 @@
     padding-left: 80px;
     padding-right: 80px;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .content {
@@ -21,78 +22,10 @@
     position: relative;
 }
 
-.formName {
-    width: 300px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    display: inline-block;
-}
-
-.formPhone {
-    width: 300px;
-    float: right;
-}
-
 .formstreetAddress {
-    padding-bottom: 20px;
+    margin: 20px 0;
 }
 
-.formProvince {
-    width: 300px;
-    padding-bottom: 20px;
-
-    display: inline-block;
-}
-
-.formDistrict {
-    display: inline-block;
-    position: absolute;
-    width: 300px;
-    right: 100px;
-}
-
-/* label{
-    font-weight: 600;
-    font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} */
-
-/* input{
-    padding: 4px;
-    border-radius: 0.5em;
-    border: 1px solid #EEEEEE;
-    height: 30px;
-    width: 600px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-}
-input::placeholder{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    color: #BBBBBB;
-} */
-/* select{
-    padding: 4px;
-    border-radius: 0.5em;
-    border: 1px solid #EEEEEE;
-    height: 30px;
-    width: 200px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-}
-
-select:invalid{
-    color: #BBBBBB;
-    font-weight: 500;
-}
-option{
-    color: black;
-} */
-.selectCity {
-    position: absolute;
-    left: 410px;
-}
 .bill {
     padding-left: 100px;
 }
@@ -160,4 +93,10 @@ option{
 .bottomForm {
     display: flex;
     justify-content: space-between;
+}
+
+.form2Cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
 }

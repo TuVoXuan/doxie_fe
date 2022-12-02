@@ -111,38 +111,40 @@ export default function CheckoutPage() {
                                 onSubmit={handleSubmit(submitForm)}
                                 className={styles.formInformation}
                             >
-                                <InputForm
-                                    className={styles.formName}
-                                    name="name"
-                                    register={register}
-                                    title="Full name"
-                                    type="text"
-                                    option={{
-                                        required: {
-                                            value: true,
-                                            message: 'Please enter your full name',
-                                        },
-                                    }}
-                                    error={errors.name?.message}
-                                />
-                                <InputForm
-                                    className={styles.formPhone}
-                                    name="phone"
-                                    register={register}
-                                    title="Phone"
-                                    type="text"
-                                    error={errors.phone?.message}
-                                    option={{
-                                        required: {
-                                            value: true,
-                                            message: 'Please enter your phone number',
-                                        },
-                                        pattern: {
-                                            value: /(84|0[3|5|7|8|9])+([0-9]{8})\b/,
-                                            message: 'Phone not correct Vietnamese phone format',
-                                        },
-                                    }}
-                                />
+                                <div className={styles.form2Cols}>
+                                    <InputForm
+                                        name="name"
+                                        register={register}
+                                        title="Full name"
+                                        type="text"
+                                        option={{
+                                            required: {
+                                                value: true,
+                                                message: 'Please enter your full name',
+                                            },
+                                        }}
+                                        error={errors.name?.message}
+                                    />
+                                    <InputForm
+                                        name="phone"
+                                        register={register}
+                                        title="Phone"
+                                        type="text"
+                                        error={errors.phone?.message}
+                                        option={{
+                                            required: {
+                                                value: true,
+                                                message: 'Please enter your phone number',
+                                            },
+                                            pattern: {
+                                                value: /(84|0[3|5|7|8|9])+([0-9]{8})\b/,
+                                                message:
+                                                    'Phone not correct Vietnamese phone format',
+                                            },
+                                        }}
+                                    />
+                                </div>
+
                                 <InputForm
                                     className={styles.formstreetAddress}
                                     name="streetAddress"
@@ -158,43 +160,48 @@ export default function CheckoutPage() {
                                     }}
                                 />
 
-                                <SelectForm
-                                    className={`${styles.form__input}, ${styles.formProvince}`}
-                                    register={register}
-                                    error={errors.province?.message}
-                                    name={'province'}
-                                    option={{
-                                        required: { value: true, message: 'Select your province.' },
-                                    }}
-                                    placeholder="Select your province"
-                                    title="Province"
-                                    options={provinces}
-                                />
+                                <div className={styles.form2Cols}>
+                                    <SelectForm
+                                        register={register}
+                                        error={errors.province?.message}
+                                        name={'province'}
+                                        option={{
+                                            required: {
+                                                value: true,
+                                                message: 'Select your province.',
+                                            },
+                                        }}
+                                        placeholder="Select your province"
+                                        title="Province"
+                                        options={provinces}
+                                    />
 
-                                <SelectForm
-                                    className={`${styles.form__input}, ${styles.formDistrict}`}
-                                    register={register}
-                                    error={errors.district?.message}
-                                    name={'district'}
-                                    option={{
-                                        required: { value: true, message: 'Select your district.' },
-                                    }}
-                                    placeholder="Select your district"
-                                    title="District"
-                                    options={districts}
-                                />
-                                <SelectForm
-                                    className={styles.form__input}
-                                    register={register}
-                                    error={errors.ward?.message}
-                                    name={'ward'}
-                                    option={{
-                                        required: { value: true, message: 'Select your ward.' },
-                                    }}
-                                    placeholder="Select your ward"
-                                    title="Ward"
-                                    options={wards}
-                                />
+                                    <SelectForm
+                                        register={register}
+                                        error={errors.district?.message}
+                                        name={'district'}
+                                        option={{
+                                            required: {
+                                                value: true,
+                                                message: 'Select your district.',
+                                            },
+                                        }}
+                                        placeholder="Select your district"
+                                        title="District"
+                                        options={districts}
+                                    />
+                                    <SelectForm
+                                        register={register}
+                                        error={errors.ward?.message}
+                                        name={'ward'}
+                                        option={{
+                                            required: { value: true, message: 'Select your ward.' },
+                                        }}
+                                        placeholder="Select your ward"
+                                        title="Ward"
+                                        options={wards}
+                                    />
+                                </div>
                             </form>
 
                             <div className={styles.bottomForm}>
