@@ -15,6 +15,7 @@ import { useNavigate } from 'react-router-dom';
 import ProtectRoute from './components/protect-route/protect-route';
 import CartPage from 'page/cart-page/cart-page';
 import CheckoutPage from './page/checkout-page/checkout-page';
+import OrderDetail from 'page/order-detail/order-detail';
 function App() {
     const dispatch = useAppDispatch();
     const sUser = useAppSelector(selectUser);
@@ -43,6 +44,9 @@ function App() {
             <Route path="/cart" element={<CartPage />} />
             <Route path="/counter" element={<CounterPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/order-detail">
+                <Route path=":id" element={<OrderDetail />} />
+            </Route>
             <Route path="/clothes">
                 <Route index element={<ClothesPage />} />
                 {/* <Route path=":parentCate" element={<ClothesDetail />} /> */}
