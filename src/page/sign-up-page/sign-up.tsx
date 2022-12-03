@@ -8,9 +8,10 @@ import { useForm } from 'react-hook-form';
 import SelectForm from '../../components/select-form/select-form';
 import { getDistricts, getProvinces, getWards } from '../../utils/province-api';
 import { signUp } from '../../redux/actions/user-actions';
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { useNavigate } from 'react-router-dom';
 import { toastError } from '../../utils/toast';
+import { selectUser } from '../../redux/reducers/user-slice';
 
 export default function SignUpPage() {
     const {
@@ -22,6 +23,7 @@ export default function SignUpPage() {
 
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
+    const userId = localStorage.getItem('userId');
 
     const [provinces, setProvinces] = useState<IOption[]>([]);
     const [districts, setDistricts] = useState<IOption[]>([]);
@@ -29,6 +31,9 @@ export default function SignUpPage() {
 
     const watchProvince = watch('province');
     const watchDistrict = watch('district');
+
+    console.log('watch province: ', watchProvince);
+    console.log('watch district: ', watchDistrict);
 
     const onSubmit = async (value: any) => {
         console.log('value: ', value);
@@ -42,6 +47,9 @@ export default function SignUpPage() {
     };
 
     useEffect(() => {
+        if (userId) {
+            navigate('/');
+        }
         getProvinces(setProvinces);
     }, []);
 

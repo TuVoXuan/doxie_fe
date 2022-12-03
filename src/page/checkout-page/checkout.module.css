@@ -1,0 +1,102 @@
+.formCheckout {
+    background-color: white;
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.content {
+    border-top: #f1f1f1 solid 2px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding-bottom: 50px;
+}
+.personalInformation {
+    padding-right: 100px;
+    border-right: #f1f1f1 solid 2px;
+    position: relative;
+}
+
+.formstreetAddress {
+    margin: 20px 0;
+}
+
+.bill {
+    padding-left: 100px;
+}
+.billContent {
+    background-color: #fbfcff;
+    padding: 0px 20px 0px 20px;
+}
+.titleBill {
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    font-weight: 600;
+    border-bottom: #f1f1f1 solid 2px;
+}
+.billSummary {
+    padding-top: 15px;
+    border-bottom: #f1f1f1 solid 2px;
+    font-size: 14px;
+}
+.billSummaryLeft {
+    font-weight: 600;
+    float: right;
+}
+.billSummaryLine {
+    line-height: 50px;
+}
+
+.billSummaryLineTotal {
+    line-height: 70px;
+    height: 70px;
+    font-weight: 600;
+}
+
+.billSummaryLeftTotal {
+    font-weight: 800;
+    size: 20px;
+    float: right;
+}
+.buttonBack {
+    padding: 0;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.buttonNext {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: black;
+}
+.inButtonNext {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+.formInformation {
+    border-bottom: #f1f1f1 solid 2px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.bottomForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form2Cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}

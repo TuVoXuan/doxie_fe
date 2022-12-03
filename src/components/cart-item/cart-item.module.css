@@ -1,0 +1,112 @@
+.image {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+    object-fit: cover;
+    background-color: #c4c4c4;
+    border-radius: 9px;
+}
+
+.image__container {
+    height: 140px;
+    width: 140px;
+}
+
+.container {
+    display: flex;
+}
+
+.div__content {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.div__button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.delBtn__container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.delBtn {
+    background: white;
+    border: none;
+    padding: 0;
+}
+
+.delBtn:hover {
+    cursor: pointer;
+}
+.quantityBtn_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button_quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.button_quantity__disabled {
+    border: 1px solid #f1f1f1;
+    background-color: #f1f1f1;
+    cursor: default;
+}
+
+.item__quantity {
+    text-align: center;
+    font-size: 16px;
+}
+
+.item_text {
+    font-size: 13px;
+}
+
+.font--title {
+    font-size: 20px;
+}
+
+.font--gold {
+    color: #f8e004;
+}
+
+.font--bold {
+    font-weight: 600;
+}
+
+.font--gray {
+    color: #666666;
+}
+
+.item_price {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.item_price::before {
+    content: '$';
+}
+
+.size_container {
+    display: flex;
+    column-gap: 40px;
+}

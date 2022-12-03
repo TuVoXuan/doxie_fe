@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './SignIn.module.css';
 import logo from '../../assets/images/logo.svg';
 import InputForm from '../../components/input-form/input-form';
 import { TbArrowBigRightLines } from 'react-icons/tb';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { signIn } from '../../redux/actions/user-actions';
 import { toastError } from '../../utils/toast';
+import { selectUser } from '../../redux/reducers/user-slice';
 
 interface ISignInForm {
     email: string;
@@ -17,6 +18,8 @@ interface ISignInForm {
 export default function SignInPage() {
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
+
+    const userId = localStorage.getItem('userId');
 
     const {
         register,
@@ -32,6 +35,12 @@ export default function SignInPage() {
             toastError(error.message);
         }
     };
+
+    useEffect(() => {
+        if (userId) {
+            navigate('/');
+        }
+    }, []);
 
     return (
         <section className={styles.mainContainer}>
