@@ -1,0 +1,117 @@
+.order__detail {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* chinh logo */
+.logo__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* width: 80px;
+  height: 80px; */
+    /* margin: 0 auto; */
+}
+
+.logo__background {
+    color: var(--gray-5);
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.status {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.status p {
+    display: flex;
+    justify-content: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    background-color: #333;
+    flex: 1;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.item__info {
+    display: flex;
+    flex-wrap: wrap;
+}
+td {
+    padding: 10px 5px;
+}
+
+td img {
+    margin-right: 10px;
+}
+div.td__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0px 16px;
+    margin-top: 32px;
+}
+
+.td__children-right {
+    background: var(--gray-5);
+    padding: 24px;
+    border-radius: 5px;
+}
+
+.td__children-right > * + * {
+    margin-top: 16px;
+}
+
+div.td__content--children {
+    margin: 10px;
+    padding: 10px;
+}
+.td__footer {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+.item__info {
+    display: flex;
+    justify-content: space-between;
+}
+.line {
+    border: 1px solid transparent;
+    border-top: 1px solid var(--gray-20);
+}
+.line__footer {
+    margin-top: 30px;
+    border: 1px solid transparent;
+    border-top: 2px solid var(--gray-10);
+}
+.transaction--list {
+    border: 0px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+.back--homepage {
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    width: 25%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cover__page {
+    padding-bottom: 40px;
+}

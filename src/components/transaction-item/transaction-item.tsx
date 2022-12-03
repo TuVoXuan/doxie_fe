@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { categories } from '../../fake-data/category';
 import { orders } from '../../fake-data/order';
 import { orderDetails } from '../../fake-data/order-detail';
@@ -10,6 +11,8 @@ interface Props {
 }
 
 export default function TransactionItem({ orderId }: Props) {
+    const navigate = useNavigate();
+
     const order = orders.find((item) => item.id === orderId);
     const details = orderDetails.filter((item) => {
         if (order?.orderDetailId.findIndex((e) => e === item.id) !== -1) {
@@ -19,6 +22,10 @@ export default function TransactionItem({ orderId }: Props) {
     const nums = details.reduce((total: number, item: IOrderDetail) => total + item.quantity, 0);
     const product = products.find((item) => item.id === details[0]?.productId);
     const category = categories.find((item) => item.id === product?.category);
+
+    const handleClick = () => {
+        navigate(`/order-detail/${orderId}`);
+    };
 
     return (
         <div className={style.container}>
@@ -49,7 +56,9 @@ export default function TransactionItem({ orderId }: Props) {
                         <p className={style['body__order--total']}>
                             {order?.total.toLocaleString()}
                         </p>
-                        <p className={style['body__order--details']}>See details</p>
+                        <p className={style['body__order--details']} onClick={handleClick}>
+                            See details
+                        </p>
                     </div>
                 </div>
             </div>
