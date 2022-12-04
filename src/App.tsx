@@ -4,7 +4,7 @@ import CounterPage from './page/counter-page';
 import './styles/App.css';
 import React, { useEffect } from 'react';
 import ClothesPage from './page/clothes-page/clothes-page';
-import ErrorPage from './page/error-page';
+import ErrorPage from './page/error-page/error-page';
 import SignInPage from './page/sign-in-page/sign-in';
 import SignUpPage from './page/sign-up-page/sign-up';
 import UserPage from './page/user-page/user-page';

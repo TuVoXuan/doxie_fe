@@ -1,0 +1,33 @@
+.errorContainer {
+    display: flex;
+    background-color: var(--gray-5);
+    height: 100vh;
+    margin: auto;
+}
+.errorContent {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    background: white;
+    border-radius: 20px;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.errorImage {
+    height: 400px;
+}
+
+.GoHomeBtn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: black;
+    outline: none;
+    color: white;
+    width: fit-content;
+}
+
+.GoHomeBtn:hover {
+    cursor: pointer;
+}
