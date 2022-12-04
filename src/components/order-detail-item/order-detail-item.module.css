@@ -1,0 +1,27 @@
+.item__product {
+    display: flex;
+    gap: 0 16px;
+}
+
+.img__product {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    background-color: var(--gray-10);
+    border-radius: 5px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.color__item {
+    color: var(--gray-80);
+}
+.line {
+    margin-top: 30px;
+    border: 1px solid transparent;
+    border-top: 2px solid var(--gray-10);
+}
