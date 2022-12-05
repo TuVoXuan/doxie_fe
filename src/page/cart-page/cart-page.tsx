@@ -6,9 +6,11 @@ import { useState, useEffect } from 'react';
 import CartItem from 'components/cart-item/cart-item';
 import { useAppSelector } from 'app/hooks';
 import { selectCart } from 'redux/reducers/cart-slice';
+import { useNavigate } from 'react-router-dom';
 
 export default function CartPage() {
     const sCart = useAppSelector(selectCart);
+    const navigate = useNavigate();
     const [totalQuantity, setTotalQuantity] = useState<number>(0);
     const [subTotal, setSubTotal] = useState<number>(0);
 
@@ -26,6 +28,10 @@ export default function CartPage() {
             0
         );
         setSubTotal(tempSubTotal);
+    };
+
+    const handleGoToCheckOut = () => {
+        navigate('/checkout');
     };
 
     useEffect(() => {
@@ -137,7 +143,10 @@ export default function CartPage() {
                                     Process to checkout
                                 </button>
                             ) : (
-                                <button className={styles.button_checkout}>
+                                <button
+                                    onClick={handleGoToCheckOut}
+                                    className={styles.button_checkout}
+                                >
                                     Process to checkout
                                 </button>
                             )}
