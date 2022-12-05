@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './product-card.module.css';
 
 interface Props {
@@ -6,8 +7,13 @@ interface Props {
 }
 
 export default function ProductCard({ product }: Props) {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/product-details/${product.id}`);
+    };
     return (
-        <section className={styles.product__card}>
+        <section className={styles.product__card} onClick={handleClick}>
             <div className={styles.image__container}>
                 <img className={styles.image} width="100%" alt="image" src={product.image} />
             </div>

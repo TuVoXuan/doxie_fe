@@ -1,6 +1,6 @@
 .title__sub {
     font-size: 80px;
-    color: var(--gray-10);
+    color: var(--gray-5);
     text-transform: capitalize;
 }
 
@@ -20,4 +20,16 @@
 
 .title__sub--bold {
     font-weight: 700;
+}
+
+.title__large {
+    font-size: 32px;
+}
+
+.title__sub--large {
+    font-size: 140px;
+}
+
+.title__sub--bold-color {
+    color: var(--gray15);
 }

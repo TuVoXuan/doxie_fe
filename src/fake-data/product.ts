@@ -91,9 +91,9 @@ export const products: IProduct[] = [
         category: 'c1bfbd86-5657-442f-816a-8a92e7deb829',
         imageDefault: '/assets/images/women/Sweater/Sweater1.png',
         images: [
-            '/assets/images/Sweater1-1.png',
-            '/assets/images/Sweater1-2.png',
-            '/assets/images/Sweater1-3.png',
+            '/assets/images/women/Sweater/Sweater1-1.png',
+            '/assets/images/women/Sweater/Sweater1-2.png',
+            '/assets/images/women/Sweater/Sweater1-3.png',
         ],
         name: 'Women Sweater MD51702',
         price: 50,
