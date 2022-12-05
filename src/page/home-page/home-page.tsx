@@ -1,7 +1,6 @@
 import Layout from 'layout/layout';
 import styles from './HomePage.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
 import { categories } from 'fake-data/category';
 import ProductCard from 'components/product-card/product-card';
 import { useEffect, useState } from 'react';
@@ -15,6 +14,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Container from '../../components/Container/Container';
 import Title from '../../components/title/Title';
+import { Navigation } from 'swiper';
 
 export default function HomePage() {
     const [pros, setPros] = useState<IProductCard[]>([]);
@@ -118,7 +118,7 @@ export default function HomePage() {
                     slidesPerView={3}
                     navigation
                     onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSwiper={(swiper) => console.log(swiper)}
                 >
                     {pros.map((item) => (
                         <SwiperSlide key={item.id}>

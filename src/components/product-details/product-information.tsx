@@ -1,44 +1,36 @@
-import './product-information.css';
-
+import Title from 'components/title/Title';
 import React from 'react';
+import style from './product-information.module.css';
 
-export default function ProductInformation() {
+interface Props {
+    product: IProduct;
+}
+
+export default function ProductInformation({ product }: Props) {
     return (
-        <div className="product__information">
-            <h3>Product Information</h3>
-            <hr />
-            <div className="product__details">
-                <h4>PRODUCT DETAILS</h4>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas ac bibendum
-                        accumsan, pellentesque magna diam.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim elementum nec
-                        volutpat fusce nisl, adipiscing et sed egestas. Nec pulvinar leo posuere
-                        gravida sed. Arcu, non tellus faucibus suscipit malesuada elementum nec cras
-                        tristique. Lectus risus augue semper maecenas felis. Purus integer nulla id
-                        elementum sed tristique faucibus tristique.
-                    </p>
+        <div className={style.cover}>
+            <div className={style.product__info}>
+                <Title mainTitle="Product Infomation" subTitle="Overview" titleBold />
+                <hr className={style.line} />
+                <div className={style.product__note}>
+                    <h4 className={style.note__title}>PRODUCT DETAILS</h4>
+                    <div className={style.note__content}>
+                        <p>{product.productDetail}</p>
+                    </div>
                 </div>
-            </div>
-            <div className="product__care">
-                <h4>PRODUCT CARE</h4>
-                <ul>
-                    <li>
-                        <p>Hand wash using cold water.</p>
-                    </li>
-                    <li>
-                        <p>Do not using bleach.</p>
-                    </li>
-                    <li>
-                        <p>Hang it to dry.</p>
-                    </li>
-                    <li>
-                        <p>Iron on low temperature.</p>
-                    </li>
-                </ul>
+                <div className={style.space}></div>
+                <div className={style.product__note}>
+                    <h4 className={style.note__title}>PRODUCT CARE</h4>
+                    <div className={style.note__content}>
+                        <ul>
+                            {product.productCare.map((item) => (
+                                <li key={item}>
+                                    <p>{item}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     );

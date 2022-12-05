@@ -28,8 +28,6 @@ export default function SelectForm({
 }: Props) {
     const detailsRef = useRef<HTMLDetailsElement>(null);
 
-    console.log('select re-render');
-
     const handleClick = () => {
         if (detailsRef.current) {
             detailsRef.current.removeAttribute('open');

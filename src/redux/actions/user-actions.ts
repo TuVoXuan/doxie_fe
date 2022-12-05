@@ -18,3 +18,27 @@ export const signUp = createAsyncThunk('user/signUp', async (data: ISignUP, thun
         return thunkAPI.rejectWithValue(error);
     }
 });
+
+export const updateProfile = createAsyncThunk(
+    'user/updateProfile',
+    async (data: IUpdateProfileData, thunkAPI) => {
+        try {
+            const response = await userApi.updateProfile(data);
+            return response.data;
+        } catch (error) {
+            return thunkAPI.rejectWithValue(error);
+        }
+    }
+);
+
+export const getCurrentUser = createAsyncThunk(
+    'user/getCurrent',
+    async (userId: string, thunkAPI) => {
+        try {
+            const response = await userApi.getCurrentUser(userId);
+            return response.data;
+        } catch (error) {
+            return thunkAPI.rejectWithValue(error);
+        }
+    }
+);

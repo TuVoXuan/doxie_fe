@@ -4,8 +4,19 @@
     align-items: center;
     color: var(--gray-80);
     cursor: pointer;
-    padding-right: 12px;
-    margin-bottom: 24px;
+    padding: 12px;
+    padding-left: 4px;
+    margin-bottom: 4px;
+    transition: all 1s ease;
+}
+
+.navBar__head--active {
+    background-color: var(--black-80);
+}
+
+.navBar__head__icon--active,
+.navBar__head__title--acitve {
+    color: white;
 }
 
 .navBar__head__title {

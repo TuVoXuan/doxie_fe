@@ -1,0 +1,17 @@
+.container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.line {
+    background-color: var(--gray-5);
+    height: 2px;
+    border: none;
+}
+
+.container__transactions > div {
+    margin-top: 24px;
+}

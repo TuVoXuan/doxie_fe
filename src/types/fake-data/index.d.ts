@@ -25,23 +25,18 @@ declare interface IOrder {
     province: string;
     district: string;
     ward: string;
-    hamlet: string;
     shippingFee: number;
-    nameOfCard: string;
-    cardNumber: string;
-    expiryDate: string;
-    cvvNumber: number;
     date: Date;
     total: number;
-    statetus: 'pending' | 'shipping' | 'delivered';
+    statetus: 'pending' | 'completed' | 'delivering';
 }
 
-declare interface IOrderDetailId {
+declare interface IOrderDetail {
     id: string;
     price: number;
     productId: string;
     quantity: number;
-    size: 'XS' | 'S' | 'M' | 'XL';
+    size: string;
 }
 
 declare interface IUser {
@@ -53,6 +48,5 @@ declare interface IUser {
     province: string;
     district: string;
     ward: string;
-    avatar: string;
     password: string;
 }
