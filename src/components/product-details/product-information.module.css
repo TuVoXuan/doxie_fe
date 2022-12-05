@@ -1,5 +1,7 @@
 .cover {
     padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .product__info {
@@ -7,6 +9,20 @@
     padding: 40px 100px;
     border-radius: 5px;
 }
+
+.cover::after {
+    position: absolute;
+    content: '';
+    width: 250px;
+    height: 250px;
+    border-radius: 9999px;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -70%);
+    background-color: var(--orange-15);
+    z-index: -1;
+}
+
 .line {
     border: 1px solid transparent;
     border-top: 1px solid var(--gray-10);
