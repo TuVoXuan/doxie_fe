@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './product-overview.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import Title from '../title/Title';
@@ -54,6 +54,10 @@ export default function ProductOverview({ product, category }: Props) {
         }
     };
 
+    useEffect(() => {
+        setImagePresent(product.imageDefault);
+    }, [product]);
+
     return (
         <div className="product__overview">
             <div className="overview__left">
@@ -77,7 +81,6 @@ export default function ProductOverview({ product, category }: Props) {
                         />
                     </div>
 
-                    {/* <h2 className="product__name">Cameryn Sash Tie Dress</h2> */}
                     <form action="">
                         <p>Select Size</p>
                         <div className="size-select">

@@ -27,7 +27,7 @@ export default function ProductDetails() {
             }
             setProduct(data);
         }
-    }, []);
+    }, [id]);
 
     return (
         <Layout background="gray">

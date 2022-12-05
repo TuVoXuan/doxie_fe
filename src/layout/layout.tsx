@@ -43,6 +43,10 @@ export default function Layout({ children, background }: Props) {
         navigate('/sign-in');
     };
 
+    const handleSeeProductDetail = (id: string) => () => {
+        navigate(`/product-details/${id}`);
+    };
+
     useEffect(() => {
         const timeout = setTimeout(() => {
             if (key) {
@@ -109,7 +113,7 @@ export default function Layout({ children, background }: Props) {
                             {searchItems.length > 0 &&
                                 searchItems.map((item) => (
                                     <p
-                                        onClick={() => console.log('hello')}
+                                        onClick={handleSeeProductDetail(item.id)}
                                         key={item.id}
                                         className="header-left__search-item"
                                     >
