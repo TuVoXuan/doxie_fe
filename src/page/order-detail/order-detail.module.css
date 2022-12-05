@@ -1,5 +1,5 @@
 .order__detail {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -16,13 +16,14 @@
 .logo__background {
     color: var(--gray-5);
     font-weight: bold;
-    font-size: 120px;
+    font-size: 100px;
 }
 
 .logo {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    height: 30px;
 }
 
 .status {

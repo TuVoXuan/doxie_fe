@@ -46,9 +46,7 @@ export default function OrderDetail() {
                         {/* logo page order */}
                         <div className={style.logo__container}>
                             <p className={style.logo__background}>Status</p>
-                            <p className={style.logo}>
-                                <img src={logo} alt="LOGO" />
-                            </p>
+                            <img className={style.logo} src={logo} alt="LOGO" />
                         </div>
                         {/* chua status cua page */}
                         <div className={style.status}>
