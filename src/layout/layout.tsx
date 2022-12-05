@@ -134,19 +134,26 @@ export default function Layout({ children, background }: Props) {
                         ) : (
                             <Button title="Sign in" type="primay" onClick={handleGoSignIn} />
                         )}
-                        <button onClick={handleCartClick} className="header-right__cart-button">
-                            <FaShoppingCart className="cart-button__icon" size={16} />
-                        </button>
                         {sUser.isLogin ? (
-                            <button onClick={handleSignOut} className="header-right__button">
-                                <FiLogOut size={16} />
-                            </button>
+                            <>
+                                <button
+                                    onClick={handleCartClick}
+                                    className="header-right__cart-button"
+                                >
+                                    <FaShoppingCart className="cart-button__icon" size={16} />
+                                </button>
+                                <button onClick={handleSignOut} className="header-right__button">
+                                    <FiLogOut size={16} />
+                                </button>
+                            </>
                         ) : null}
                     </div>
                 </section>
             </header>
 
-            <main className={`px-10 mb-25 ${handleBackground()}`}>{children}</main>
+            <main className={`px-10 mb-25 overflow-x-hidden ${handleBackground()}`}>
+                {children}
+            </main>
 
             <footer className="footer px-10">
                 <div className="footer__des">

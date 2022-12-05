@@ -86,6 +86,9 @@ export default function CheckoutPage() {
         navigate('/cart');
     };
     useEffect(() => {
+        if (sCart.length === 0) {
+            navigate(-1);
+        }
         getProvinces(setProvinces);
     }, []);
 
