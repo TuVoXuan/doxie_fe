@@ -1,0 +1,41 @@
+.cover {
+    padding-bottom: 20px;
+}
+
+.product__info {
+    background-color: white;
+    padding: 40px 100px;
+    border-radius: 5px;
+}
+.line {
+    border: 1px solid transparent;
+    border-top: 1px solid var(--gray-10);
+    margin: 20px 0;
+}
+.product__note {
+    display: flex;
+}
+
+.note__title {
+    flex: 1;
+    color: var(--gray-70);
+}
+.note__content {
+    flex: 3;
+    line-height: 1.8;
+}
+
+.note__content > * + * {
+    margin-top: 12px;
+}
+
+.note__content ul {
+    padding-left: 14px;
+}
+
+.note__content ul li {
+    font-weight: 600;
+}
+.space {
+    margin: 30px 0;
+}
