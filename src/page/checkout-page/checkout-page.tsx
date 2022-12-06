@@ -15,18 +15,34 @@ import { orders } from 'fake-data/order';
 import { useNavigate } from 'react-router-dom';
 
 export default function CheckoutPage() {
+    const sUser = useAppSelector(selectUser);
+
     const {
         register,
         handleSubmit,
         watch,
         setValue,
         formState: { errors },
-    } = useForm<IFormCheckOut>();
+    } = useForm<IFormCheckOut>({
+        defaultValues: {
+            name: sUser.data.name,
+            phone: sUser.data.phone,
+            streetAddress: sUser.data.streetAddress,
+            province: sUser.data.province,
+            district: sUser.data.district,
+            ward: sUser.data.ward,
+        },
+    });
 
     const dispatch = useAppDispatch();
     const sCart = useAppSelector(selectCart);
-    const user = useAppSelector(selectUser);
     const navigate = useNavigate();
+    const [provinces, setProvinces] = useState<IOption[]>([]);
+    const [districts, setDistricts] = useState<IOption[]>([]);
+    const [wards, setWards] = useState<IOption[]>([]);
+
+    const watchProvince = watch('province');
+    const watchDistrict = watch('district');
 
     const totalQuantity = sCart.reduce((preValue, currValue) => {
         return preValue + currValue.quantity;
@@ -35,13 +51,8 @@ export default function CheckoutPage() {
     const subTotal = sCart.reduce((preValue, currValue) => {
         return preValue + currValue.quantity * currValue.price;
     }, 0);
-    const total = subTotal + 21;
-    const [provinces, setProvinces] = useState<IOption[]>([]);
-    const [districts, setDistricts] = useState<IOption[]>([]);
-    const [wards, setWards] = useState<IOption[]>([]);
 
-    const watchProvince = watch('province');
-    const watchDistrict = watch('district');
+    const total = subTotal + 21;
 
     const submitForm = (value: IFormCheckOut) => {
         console.log(value);
@@ -71,7 +82,7 @@ export default function CheckoutPage() {
             total: total,
             shippingFee: 5,
             statetus: 'pending',
-            userId: user.data.id,
+            userId: sUser.data.id,
             orderDetailId: orderDetail,
         };
 
@@ -80,7 +91,7 @@ export default function CheckoutPage() {
         // remove cart
         dispatch(removeAll());
         // go to detail order page
-        navigate('/');
+        navigate(`/order-detail/${newOrder.id}`);
     };
     const goBack = () => {
         navigate('/cart');
@@ -89,18 +100,32 @@ export default function CheckoutPage() {
         if (sCart.length === 0) {
             navigate(-1);
         }
-        getProvinces(setProvinces);
+        if (provinces.length === 0) {
+            getProvinces(setProvinces);
+        }
     }, []);
 
     useEffect(() => {
-        const provinceId = provinces.find((item) => item.value === watchProvince)?.id || '5';
-        getDistricts(provinceId, setDistricts);
-    }, [watchProvince]);
+        const timeOut = setTimeout(() => {
+            const provinceId = provinces.find((item) => item.value === watchProvince)?.id || '5';
+            getDistricts(provinceId, setDistricts);
+        }, 100);
+
+        return () => {
+            clearTimeout(timeOut);
+        };
+    }, [watchProvince, provinces]);
 
     useEffect(() => {
-        const districtId = districts.find((item) => item.value === watchDistrict)?.id || '5';
-        getWards(districtId, setWards);
-    }, [watchDistrict]);
+        const timeOut = setTimeout(() => {
+            const districtId = districts.find((item) => item.value === watchDistrict)?.id || '5';
+            getWards(districtId, setWards);
+        }, 100);
+
+        return () => {
+            clearTimeout(timeOut);
+        };
+    }, [watchProvince, watchDistrict, districts]);
 
     return (
         <Layout background="gray">

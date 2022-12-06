@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from 'app/hooks';
 import { add } from 'redux/reducers/cart-slice';
 import { v4 as uuidv4 } from 'uuid';
-import { toastError } from 'utils/toast';
+import { toastError, toastSuccess } from 'utils/toast';
 
 interface Props {
     product: IProduct;
@@ -51,6 +51,7 @@ export default function ProductOverview({ product, category }: Props) {
                     size,
                 })
             );
+            toastSuccess('Add product to cart success!');
         }
     };
 
