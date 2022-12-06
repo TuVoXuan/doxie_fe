@@ -2,38 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 import { incrementAsync } from '../actions/counter-actions';
 
-const initialState: ICartItem[] = [
-    // {
-    //     id: 'a8157056-d4a1-4065-b7de-798b8afe91a7',
-    //     productId: 'f76731c6-cd74-449a-bcef-40eb5d55584f',
-    //     category: 't shirts',
-    //     defaultImg: './assets/images/women/TShirts/TShirt1.png',
-    //     name: 'Women TShirts MT21025',
-    //     price: 50,
-    //     size: 'S',
-    //     quantity: 1,
-    // },
-    // {
-    //     id: '7b4b8b60-c44f-4e11-b296-8a0fe0f58e60',
-    //     productId: '0d23f948-9f2a-4527-a415-28c28ce38289',
-    //     category: 't shirts',
-    //     defaultImg: './assets/images/women/TShirts/TShirt2.png',
-    //     name: 'Women TShirts MT21026',
-    //     price: 50,
-    //     size: 'L',
-    //     quantity: 2,
-    // },
-    // {
-    //     id: '8beb5d92-962f-4271-aa45-a301246cfc9d',
-    //     productId: '550f82c7-4f9f-48f9-81dd-057717fe1a22',
-    //     category: 'jacket',
-    //     defaultImg: './assets/images/kids/Jacket/Jacket4.png',
-    //     name: 'Appliquéd Baseball Jacket',
-    //     price: 49.99,
-    //     size: 'L',
-    //     quantity: 2,
-    // },
-];
+const initialState: ICartItem[] = JSON.parse(localStorage.getItem('cart') || '[]');
 
 export const cartSlice = createSlice({
     name: 'cart',
@@ -45,6 +14,8 @@ export const cartSlice = createSlice({
             if (index >= 0) {
                 state.splice(index, 1);
             }
+
+            localStorage.setItem('cart', JSON.stringify(state));
         },
         changeQuantity: (state, action: PayloadAction<IChangeQuantity>) => {
             const itemID = action.payload.id;
@@ -56,9 +27,12 @@ export const cartSlice = createSlice({
                     foundItem.quantity -= 1;
                 }
             }
+
+            localStorage.setItem('cart', JSON.stringify(state));
         },
         removeAll: (state) => {
             state.splice(0);
+            localStorage.setItem('cart', '[]');
         },
         add: (state, action: PayloadAction<ICartItem>) => {
             const item = action.payload;
@@ -69,6 +43,8 @@ export const cartSlice = createSlice({
             } else {
                 state.push(item);
             }
+
+            localStorage.setItem('cart', JSON.stringify(state));
         },
     },
 });
