@@ -115,7 +115,7 @@ export default function OrderDetail() {
                         <div className={style.td__footer}>
                             <button
                                 className={style['transaction--list']}
-                                onClick={() => navigate(-1)}
+                                onClick={() => navigate('/user/transaction?type=pending')}
                             >
                                 Transaction List
                             </button>
