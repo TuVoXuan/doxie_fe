@@ -36,7 +36,7 @@ export const cartSlice = createSlice({
         },
         add: (state, action: PayloadAction<ICartItem>) => {
             const item = action.payload;
-            const data = state.find((e) => e.productId === item.productId);
+            const data = state.find((e) => e.productId === item.productId && e.size === item.size);
 
             if (data) {
                 data.quantity += 1;
