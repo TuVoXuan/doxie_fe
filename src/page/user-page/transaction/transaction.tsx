@@ -40,9 +40,7 @@ export default function Transaction({ type }: Props) {
             <Title mainTitle={type} subTitle="Transaction" titleBold />
             <hr className={style.line} />
             <section className={style.container__transactions}>
-                {orderIds.map((id) => (
-                    <TransactionItem orderId={id} key={id} />
-                ))}
+                {orderIds.map((id) => <TransactionItem orderId={id} key={id} />).reverse()}
             </section>
         </aside>
     );

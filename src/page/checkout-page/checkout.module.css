@@ -5,7 +5,6 @@
     padding-bottom: 12px;
     padding-left: 80px;
     padding-right: 80px;
-    margin-bottom: 40px;
     border-radius: 10px;
 }
 
@@ -31,37 +30,35 @@
 }
 .billContent {
     background-color: #fbfcff;
-    padding: 0px 20px 0px 20px;
+    border-radius: 9px;
+    padding: 20px;
 }
 .titleBill {
     display: block;
-    height: 70px;
-    line-height: 70px;
-    font-weight: 600;
+    height: 30px;
+    font-weight: 700;
     border-bottom: #f1f1f1 solid 2px;
 }
 .billSummary {
-    padding-top: 15px;
     border-bottom: #f1f1f1 solid 2px;
     font-size: 14px;
 }
 .billSummaryLeft {
-    font-weight: 600;
+    font-weight: 700;
     float: right;
 }
 .billSummaryLine {
-    line-height: 50px;
+    line-height: 40px;
 }
 
 .billSummaryLineTotal {
-    line-height: 70px;
-    height: 70px;
+    line-height: 40px;
     font-weight: 600;
 }
 
 .billSummaryLeftTotal {
-    font-weight: 800;
-    size: 20px;
+    font-weight: 700;
+    font-size: 20px;
     float: right;
 }
 .buttonBack {

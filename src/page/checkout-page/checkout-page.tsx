@@ -129,7 +129,7 @@ export default function CheckoutPage() {
 
     return (
         <Layout background="gray">
-            <section style={{ paddingBottom: '40px' }}>
+            <section style={{ paddingBottom: '20px' }}>
                 <div className={styles.formCheckout}>
                     <Title mainTitle="Checkout Process" subTitle="Checkout" titleBold />
                     <div className={styles.content}>
@@ -248,12 +248,13 @@ export default function CheckoutPage() {
 
                         <aside className={styles.bill}>
                             <div className={styles.billContent}>
-                                <h2 className={styles.titleBill}>Order Summary</h2>
+                                <p className={styles.titleBill}>Order Summary</p>
                                 <div className={styles.billSummary}>
                                     <p className={styles.billSummaryLine}>
-                                        Quanlity
+                                        Quantity
                                         <span className={styles.billSummaryLeft}>
-                                            {totalQuantity} Products
+                                            {totalQuantity} Product
+                                            {totalQuantity > 1 ? 's' : ''}
                                         </span>
                                     </p>
                                     <p className={styles.billSummaryLine}>
@@ -275,7 +276,9 @@ export default function CheckoutPage() {
                                 </div>
                                 <p className={styles.billSummaryLineTotal}>
                                     Total
-                                    <span className={styles.billSummaryLeftTotal}>${total}</span>
+                                    <span className={styles.billSummaryLeftTotal}>
+                                        ${total.toLocaleString()}
+                                    </span>
                                 </p>
                             </div>
                         </aside>

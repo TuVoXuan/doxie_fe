@@ -18,6 +18,9 @@ export default function OrderDetail() {
     const [details, setDetails] = useState<IOrderDetail[]>([]);
     const [subTotal, setSubTotal] = useState<number>(0);
     const [orderSoure, setOrderSoure] = useState<IOrder>();
+    const totalQuantity = details.reduce((preValue, currentValue) => {
+        return preValue + currentValue.quantity;
+    }, 0);
 
     const handleGoToHomePage = () => {
         navigate('/');
@@ -50,14 +53,14 @@ export default function OrderDetail() {
                         </div>
                         {/* chua status cua page */}
                         <div className={style.status}>
-                            <p>{orderSoure?.id}</p>
-                            <p>{orderSoure?.statetus}</p>
-                            <p>{orderSoure?.date.toDateString()}</p>
+                            <p className={style.font_bold}>{orderSoure?.id}</p>
+                            <p className={style.font_bold}>{orderSoure?.statetus}</p>
+                            <p className={style.font_bold}>{orderSoure?.date.toDateString()}</p>
                         </div>
                         {/* chua content cua page */}
                         <div className={style.td__content}>
                             {/* nua trai */}
-                            <div className={style.td__children}>
+                            <div className={`${style.td__children} ${style.item_list}`}>
                                 {details.map((item) => (
                                     <OrderDetailItem
                                         key={item.id}
@@ -68,8 +71,9 @@ export default function OrderDetail() {
                                     />
                                 ))}
                             </div>
-                            <div className={`${style.td__children} ${style['td__children-right']}`}>
-                                <h2>Order Summary</h2>
+                            {/* nua phai */}
+                            {/* <div className={`${style.td__children} ${style['td__children-right']}`}>
+                                <p className={`${style.order_title} ${style.font_bold}`}>Order Summary</p>
                                 <hr className={style.line} />
                                 <div className={style.item__info}>
                                     <p>Quantity</p>
@@ -107,6 +111,55 @@ export default function OrderDetail() {
                                             currency: 'USD',
                                         })}
                                     </h4>
+                                </div>
+                            </div> */}
+
+                            <div>
+                                <div className={style.order_summary}>
+                                    <p
+                                        className={`${style.font_bold} ${style.border_bot} ${style.line_40}`}
+                                    >
+                                        Order Summary
+                                    </p>
+
+                                    <div className={`${style.order} ${style.border_bot}`}>
+                                        <div>
+                                            <p className={style.line_40}>Quantity</p>
+                                            <p className={style.line_40}>Subtotal</p>
+                                            <p className={style.line_40}>Tax</p>
+                                            <p className={style.line_40}>Duty fee</p>
+                                            <p className={style.line_40}>Shipping fee</p>
+                                        </div>
+                                        <div>
+                                            <p className={`${style.font_bold} ${style.line_40}`}>
+                                                {totalQuantity} Product
+                                                {totalQuantity > 1 ? 's' : ''}
+                                            </p>
+                                            <p className={`${style.item_price} ${style.line_40}`}>
+                                                {subTotal.toLocaleString()}
+                                            </p>
+                                            <p className={`${style.item_price} ${style.line_40}`}>
+                                                5
+                                            </p>
+                                            <p className={`${style.item_price} ${style.line_40}`}>
+                                                3
+                                            </p>
+                                            <p className={`${style.item_price} ${style.line_40}`}>
+                                                13
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className={`${style.order} ${style.line_40}`}>
+                                        <div>
+                                            <p className={style.font_bold}>Total</p>
+                                        </div>
+                                        <div>
+                                            <p className={style.item_price__total}>
+                                                {(subTotal + 21).toLocaleString()}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

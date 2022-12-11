@@ -72,11 +72,7 @@ export default function CartPage() {
                                             alt="empty-cart"
                                         />
                                     </div>
-                                    <p
-                                        className={`${styles.empty_cart_title} ${styles['font--bold']} ${styles.margin_bot_20}`}
-                                    >
-                                        Your cart is empty
-                                    </p>
+                                    <p className={styles.empty_cart_title}>Your cart is empty</p>
                                     <p className={styles.empty_cart_text}>
                                         Looks like you have not added anything to your cart. Go
                                         ahead & take a look at our new product.
@@ -86,46 +82,41 @@ export default function CartPage() {
                         </div>
                         <div className={styles.order_summary__container}>
                             <div className={styles.order_summary}>
-                                <p className={styles['font--bold']}>Order Summary</p>
-                                <hr className={styles.separator_line} />
-                                <div className={styles.order}>
-                                    <p>Quantity</p>
-                                    <p className={styles['font--bold']}>
-                                        {totalQuantity} Product
-                                        {totalQuantity > 1 ? 's' : ''}
-                                    </p>
-                                </div>
-                                <hr className={styles.separator_line} />
-                                <div className={styles.order}>
+                                <p
+                                    className={`${styles['font--bold']} ${styles.border_bot} ${styles.line_40}`}
+                                >
+                                    Order Summary
+                                </p>
+
+                                <div className={`${styles.order} ${styles.border_bot}`}>
                                     <div>
-                                        <p className={styles.margin_bot_20}>Subtotal</p>
-                                        <p className={styles.margin_bot_20}>Tax</p>
-                                        <p className={styles.margin_bot_20}>Duty fee</p>
-                                        <p>Shipping fee</p>
+                                        <p className={styles.line_40}>Quantity</p>
+                                        <p className={styles.line_40}>Subtotal</p>
+                                        <p className={styles.line_40}>Tax</p>
+                                        <p className={styles.line_40}>Duty fee</p>
+                                        <p className={styles.line_40}>Shipping fee</p>
                                     </div>
                                     <div>
-                                        <p
-                                            className={`${styles.item_price} ${styles.margin_bot_20}`}
-                                        >
+                                        <p className={`${styles['font--bold']} ${styles.line_40}`}>
+                                            {totalQuantity} Product
+                                            {totalQuantity > 1 ? 's' : ''}
+                                        </p>
+                                        <p className={`${styles.item_price} ${styles.line_40}`}>
                                             {subTotal.toLocaleString()}
                                         </p>
-                                        <p
-                                            className={`${styles.item_price} ${styles.margin_bot_20}`}
-                                        >
+                                        <p className={`${styles.item_price} ${styles.line_40}`}>
                                             {sCart.length > 0 ? 5 : 0}
                                         </p>
-                                        <p
-                                            className={`${styles.item_price} ${styles.margin_bot_20}`}
-                                        >
+                                        <p className={`${styles.item_price} ${styles.line_40}`}>
                                             {sCart.length > 0 ? 3 : 0}
                                         </p>
-                                        <p className={styles.item_price}>
+                                        <p className={`${styles.item_price} ${styles.line_40}`}>
                                             {sCart.length > 0 ? 13 : 0}
                                         </p>
                                     </div>
                                 </div>
-                                <hr className={styles.separator_line} />
-                                <div className={styles.order}>
+
+                                <div className={`${styles.order} ${styles.line_40}`}>
                                     <div>
                                         <p className={styles['font--bold']}>Total</p>
                                     </div>

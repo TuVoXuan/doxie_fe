@@ -116,3 +116,52 @@ div.td__content--children {
 .cover__page {
     padding-bottom: 40px;
 }
+
+.font_bold {
+    font-weight: 700;
+}
+
+.line_40 {
+    line-height: 40px;
+}
+
+.border_bot {
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.item_list {
+    overflow-y: auto;
+    min-height: min-content;
+    max-height: 400px;
+}
+
+.order_summary {
+    background: #fbfcff;
+    border-radius: 9px;
+    padding: 20px;
+}
+
+.order {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item_price {
+    text-align: right;
+    font-weight: 700;
+}
+
+.item_price::before {
+    content: '$';
+}
+
+.item_price__total {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.item_price__total::before {
+    content: '$';
+}
